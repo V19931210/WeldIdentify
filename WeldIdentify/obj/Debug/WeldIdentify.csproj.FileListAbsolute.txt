@@ -1,0 +1,10 @@
+D:\_2022\WeldIdentify\WeldIdentify\bin\Debug\WeldIdentify.exe.config
+D:\_2022\WeldIdentify\WeldIdentify\bin\Debug\WeldIdentify.exe
+D:\_2022\WeldIdentify\WeldIdentify\bin\Debug\WeldIdentify.pdb
+D:\_2022\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.csproj.AssemblyReference.cache
+D:\_2022\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.Properties.Resources.resources
+D:\_2022\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.WeldIdentify.resources
+D:\_2022\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.csproj.GenerateResource.cache
+D:\_2022\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.csproj.CoreCompileInputs.cache
+D:\_2022\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.exe
+D:\_2022\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.pdb
