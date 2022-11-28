@@ -16,7 +16,7 @@ namespace WeldIdentify
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WeldIdentify());
+            Application.Run(new frmWeldIdentify());
         }
     }
 }

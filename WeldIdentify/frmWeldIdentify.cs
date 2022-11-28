@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WeldIdentify
 {
-    public partial class WeldIdentify : Form
+    public partial class frmWeldIdentify : Form
     {
-        public WeldIdentify()
+        public frmWeldIdentify()
         {
             InitializeComponent();
+        }
+
+        private void frmWeldIdentify_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
