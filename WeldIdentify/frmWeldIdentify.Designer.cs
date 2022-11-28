@@ -293,6 +293,7 @@ namespace WeldIdentify
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmWeldIdentify";
             this.Text = "WeldIdentifyForm";

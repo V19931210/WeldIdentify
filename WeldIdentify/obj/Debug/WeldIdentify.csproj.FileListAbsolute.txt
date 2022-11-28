@@ -13,8 +13,8 @@ C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\
 C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\bin\Debug\WeldIdentify.pdb
 C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.csproj.AssemblyReference.cache
 C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.Properties.Resources.resources
-C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.WeldIdentify.resources
 C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.csproj.GenerateResource.cache
 C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.csproj.CoreCompileInputs.cache
 C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.exe
 C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.pdb
+C:\Users\qiquanwei\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.frmWeldIdentify.resources
