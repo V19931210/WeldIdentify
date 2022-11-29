@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PclSharp;
+using PclSharp.IO;
+using PclSharp.Common;
+using PclSharp.Registration;
 
 namespace WeldIdentify
 {
     public partial class frmWeldIdentify : Form
     {
+        private PointCloudOfXYZ pcCAD;
+        private PointCloudOfXYZ pc;
+        private IterativeClosestPoint<PointCloudOfXYZ, PointCloudOfXYZ> icp;
+
+
         public frmWeldIdentify()
         {
             InitializeComponent();
@@ -19,7 +28,7 @@ namespace WeldIdentify
 
         private void frmWeldIdentify_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
