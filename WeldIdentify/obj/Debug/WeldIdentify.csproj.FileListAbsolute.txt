@@ -53,3 +53,4 @@ C:\Users\qiqua\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\
 C:\Users\qiqua\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.csproj.CopyComplete
 C:\Users\qiqua\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.exe
 C:\Users\qiqua\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.pdb
+C:\Users\qiqua\iCloudDrive\Documents\毕业课题\WeldIdentify\WeldIdentify\obj\Debug\WeldIdentify.frmSelect.resources

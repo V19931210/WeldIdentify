@@ -61,6 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camera.cs" />
+    <Compile Include="frmSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelect.Designer.cs">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWeldIdentify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +76,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RobotControl.cs" />
+    <EmbeddedResource Include="frmSelect.resx">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -94,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\PclSharp.1.8.1.20180820-beta07\build\PclSharp.targets" Condition="Exists('..\packages\PclSharp.1.8.1.20180820-beta07\build\PclSharp.targets')" />
