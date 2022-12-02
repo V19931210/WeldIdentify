@@ -15,6 +15,11 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 
+using PclSharp;
+using PclSharp.IO;
+using PclSharp.Common;
+using PclSharp.Registration;
+
 namespace WeldIdentify
 {
     public partial class frmWeldIdentify : Form
@@ -37,7 +42,8 @@ namespace WeldIdentify
 
         //视觉软件指针 机器人控制软件指针
         private Camera2D cam2d;
-        private Camera3D cam3d;
+        private Camera3DRegis cam3dRegis;
+        private Camera3DRecog cam3dRecog;
         private RobotControl robot;
 
         public frmWeldIdentify()
@@ -48,12 +54,8 @@ namespace WeldIdentify
 
         private void frmWeldIdentify_Load(object sender, EventArgs e)
         {
-            timerUpdate2D.Tick += new EventHandler(timerUpdate2D_Tick);  //绑定事件
-            timerUpdate2D.Interval = 200;
-            timerUpdate3D.Tick += new EventHandler(timerUpdate3D_Tick);  //绑定事件
-            timerUpdate3D.Interval = 200;
-            timerUpdateRobot.Tick += new EventHandler(timerUpdateRobot_Tick);  //绑定事件
-            timerUpdateRobot.Interval = 200;
+            timerUpdateFrm.Tick += new EventHandler(timerUpdateFrm_Tick);
+            timerUpdateFrm.Interval = 200;
 
             frmS.ShowDialog();
             if (frmS.DialogResult != DialogResult.OK)
@@ -75,16 +77,29 @@ namespace WeldIdentify
                         break;
                     }
             }
-            switch (frmS.cam3dSoftware)
+            switch (frmS.cam3dRegisSoftware)
             {
                 case "3DPreciseLocate":
                     {
-                        cam3d = new CareraChishine();
+                        cam3dRegis = new CareraRegisChishine();
                         break;
                     }
                 default:
                     {
-                        cam3d = null;
+                        cam3dRegis = null;
+                        break;
+                    }
+            }
+            switch (frmS.cam3dRecogSoftware)
+            {
+                case "BCV3DEyeInHand":
+                    {
+                        cam3dRecog = new CareraRecogChishine();
+                        break;
+                    }
+                default:
+                    {
+                        cam3dRegis = null;
                         break;
                     }
             }
@@ -104,7 +119,8 @@ namespace WeldIdentify
 
             //初始化视觉软件及机器人控制软件
             OpenVisionSoftware(cam2d, ref panel2D);
-            OpenVisionSoftware(cam3d, ref panel3D);
+            OpenVisionSoftwareWithoutSocket(cam3dRegis, ref panel3DRegis);
+            OpenVisionSoftware(cam3dRecog, ref panel3DRecog);
             //OpenRobotControl(robot,ref panelRobot);
         }
 
@@ -114,41 +130,38 @@ namespace WeldIdentify
 
             //关闭视觉软件及机器人控制软件
             CloseVisionSoftware(cam2d);
-            CloseVisionSoftware(cam3d);
-            CloseRobotControl(robot);
+            CloseVisionSoftware(cam3dRegis);
+            CloseVisionSoftware(cam3dRecog);
+            CloseVisionSoftware(robot);
         }
 
-        void timerUpdate2D_Tick(object sender, EventArgs e)
+        void timerUpdateFrm_Tick(object sender, EventArgs e)
         {
             if (cam2d.handle != IntPtr.Zero)
             {
                 Thread t = new Thread(() => ResizeWindow(cam2d.handle));
                 t.Start();  //开线程刷新第三方窗体大小
-                Thread.Sleep(50); //略加延时
-                timerUpdate2D.Stop();  //停止定时器
+                Thread.Sleep(30); //略加延时
             }
-        }
-
-        void timerUpdate3D_Tick(object sender, EventArgs e)
-        {
-            if (cam3d.handle != IntPtr.Zero)
+            if (cam3dRegis.handle != IntPtr.Zero)
             {
-                Thread t = new Thread(() => ResizeWindow(cam3d.handle));
-                t.Start();  //开线程刷新第三方窗体大小
-                Thread.Sleep(50); //略加延时
-                timerUpdate2D.Stop();  //停止定时器
+                Thread t = new Thread(() => ResizeWindow(cam3dRegis.handle));
+                t.Start();
+                Thread.Sleep(30);
             }
-        }
-
-        void timerUpdateRobot_Tick(object sender, EventArgs e)
-        {
+            if (cam3dRecog.handle != IntPtr.Zero)
+            {
+                Thread t = new Thread(() => ResizeWindow(cam3dRecog.handle));
+                t.Start();
+                Thread.Sleep(30);
+            }
             if (robot.handle != IntPtr.Zero)
             {
                 Thread t = new Thread(() => ResizeWindow(robot.handle));
-                t.Start();  //开线程刷新第三方窗体大小
-                Thread.Sleep(50); //略加延时
-                timerUpdate2D.Stop();  //停止定时器
+                t.Start();
+                Thread.Sleep(30);
             }
+            timerUpdateFrm.Stop();  //停止定时器
         }
 
         public void ResizeWindow(IntPtr handle)
@@ -157,12 +170,12 @@ namespace WeldIdentify
             ShowWindow(handle, 3);  //再将窗口最大化，可以让第三方窗口自适应容器的大小
         }
 
-        //2D和3D视觉软件嵌入显示
-        private void OpenVisionSoftware(CameraBase cam, ref Panel p)
+        //视觉软件嵌入显示 不初始化socket
+        private void OpenVisionSoftwareWithoutSocket(VisionBase soft, ref Panel p)
         {
             try
             {
-                cam.InitCameraSoftware();
+                soft.InitCameraSoftwareWithoutSocket();
             }
             catch (Exception ex)
             {
@@ -170,23 +183,23 @@ namespace WeldIdentify
                 return;
             }
 
-            if (cam.handle == IntPtr.Zero)
+            if (soft.handle == IntPtr.Zero)
             {
-                MessageBox.Show($"Not Find {cam.frmName}Form!");
+                MessageBox.Show($"Not Find {soft.frmName}Form!");
             }
             Thread.Sleep(500);
 
-            RemoveWindowBorder(cam.handle);  //移除边框
-            SetParent(cam.handle, p.Handle); //嵌入父容器
-            ShowWindowAsync(cam.handle, 3);   //显示
+            RemoveWindowBorder(soft.handle);  //移除边框
+            SetParent(soft.handle, p.Handle); //嵌入父容器
+            ShowWindowAsync(soft.handle, 3);   //显示
         }
 
-        //机器人控制软件嵌入显示
-        private void OpenRobotControl(RobotControl robot, ref Panel p)
+        //视觉软件嵌入显示
+        private void OpenVisionSoftware(VisionBase soft, ref Panel p)
         {
             try
             {
-                robot.InitRobot();
+                soft.InitCameraSoftware();
             }
             catch (Exception ex)
             {
@@ -194,15 +207,32 @@ namespace WeldIdentify
                 return;
             }
 
-            if (robot.handle == IntPtr.Zero)
+            if (soft.handle == IntPtr.Zero)
             {
-                MessageBox.Show($"Not Find {robot.frmName}Form!");
+                MessageBox.Show($"Not Find {soft.frmName}Form!");
             }
             Thread.Sleep(500);
 
-            RemoveWindowBorder(robot.handle);  //移除边框
-            SetParent(robot.handle, p.Handle); //嵌入父容器
-            ShowWindowAsync(robot.handle, 3);   //显示
+            RemoveWindowBorder(soft.handle);  //移除边框
+            SetParent(soft.handle, p.Handle); //嵌入父容器
+            ShowWindowAsync(soft.handle, 3);   //显示
+        }
+
+        //关闭视觉软件
+        private void CloseVisionSoftware(VisionBase soft)
+        {
+            if (soft != null)
+            {
+                try
+                {
+                    soft.CloseCamera();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+            }
         }
 
         public static void RemoveWindowBorder(IntPtr handle)
@@ -219,40 +249,6 @@ namespace WeldIdentify
             SetWindowLong(handle, GWL_STYLE, LStyle);
         }
 
-        //关闭视觉软件
-        private void CloseVisionSoftware(CameraBase cam)
-        {
-            if (cam!=null)
-            {
-                try
-                {
-                    cam.CloseCamera();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    return;
-                }
-            }
-        }
-
-        //关闭机器人控制软件
-        private void CloseRobotControl(RobotControl robot)
-        {
-            if (robot != null)
-            {
-                try
-                {
-                    robot.CloseRobot();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    return;
-                }
-            }
-        }
-
         //日志栏添加带时间的log
         public void AddLogWithTime(string str)
         {
@@ -265,19 +261,21 @@ namespace WeldIdentify
             Log.AppendText(str + "\r\n");
         }
 
-        private void panel2D_SizeChanged(object sender, EventArgs e)
+        private void panel3DRecog_SizeChanged(object sender, EventArgs e)
         {
-            timerUpdate2D.Start();
+            timerUpdateFrm.Start();
         }
 
-        private void panel3D_SizeChanged(object sender, EventArgs e)
+        //读取CAD点云
+        public void GetCADPointCloud()
         {
-            timerUpdate3D.Start();
+
+        }
+        //点云配准
+        public void PointCloudRegis()
+        {
+
         }
 
-        private void panelRobot_SizeChanged(object sender, EventArgs e)
-        {
-            timerUpdateRobot.Start();
-        }
     }
 }

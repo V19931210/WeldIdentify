@@ -1,0 +1,212 @@
+{
+    "滤波": {
+        "半径": {
+            "ID": "RadiusOutlier.Radius",
+            "Value": 5
+        },
+        "最少点个数": {
+            "ID": "RadiusOutlier.MinNeighborsInRadius",
+            "Value": 25
+        }
+    },
+    "粗配准": {
+        "FPCS": {
+            "Delta": {
+                "ID": "FPCS.Delta",
+                "Value": 0.5
+            },
+            "Epsilon": {
+                "ID": "FPCS.Epsilon",
+                "Value": 1e-06
+            },
+            "Iterations": {
+                "ID": "FPCS.IterationTimes",
+                "Value": 200
+            },
+            "NumOfSamples": {
+                "ID": "FPCS.NumberOfSamples",
+                "Value": 200
+            },
+            "NumOfThreads": {
+                "ID": "FPCS.NumberOfThreads",
+                "Value": 4
+            },
+            "Overlap": {
+                "ID": "FPCS.OverlapRate",
+                "Value": 0.49
+            },
+            "源点云降采样": {
+                "ID": "FPCS.SourceDownSample",
+                "Value": 10
+            },
+            "目标点云降采样": {
+                "ID": "FPCS.TargetDownSample",
+                "Value": 15
+            }
+        },
+        "KFPCS": {
+            "Delta": {
+                "ID": "KFPCS.Delta",
+                "Value": 1
+            },
+            "Epsilon": {
+                "ID": "KFPCS.Epsilon",
+                "Value": 0.001
+            },
+            "Lambda": {
+                "ID": "KFPCS.Lambda",
+                "Value": 5
+            },
+            "MaxDiff": {
+                "ID": "KFPCS.MaxAngleDiff",
+                "Value": 45
+            },
+            "MaxIterations": {
+                "ID": "KFPCS.MaxIterations",
+                "Value": 1500
+            },
+            "NumOfSamples": {
+                "ID": "KFPCS.NumberOfSamples",
+                "Value": 500
+            },
+            "Overlap": {
+                "ID": "KFPCS.OverlapRate",
+                "Value": 0.3
+            },
+            "法线计算半径": {
+                "ID": "KFPCS.NormalRadius",
+                "Value": 25
+            },
+            "源点云降采样": {
+                "ID": "KFPCS.SourceDownSample",
+                "Value": 10
+            },
+            "目标点云降采样": {
+                "ID": "KFPCS.TargetDownSample",
+                "Value": 10
+            }
+        },
+        "Methods": {
+            "ID": "Rough.Methods",
+            "Options": [
+                "FPCS",
+                "RANSAC",
+                "KFPCS",
+                "SFPCS"
+            ],
+            "Type": "Enum",
+            "Value": 2
+        },
+        "RANSAC": {
+            "Epsilon": {
+                "ID": "RANSAC.Epsilon",
+                "Value": 0.0001
+            },
+            "MaxIterations": {
+                "ID": "RANSAC.MaxIterations",
+                "Value": 1000
+            },
+            "NumOfSamples": {
+                "ID": "RANSAC.NumOfSamples",
+                "Value": 1000
+            },
+            "法线计算半径": {
+                "ID": "RANSAC.R",
+                "Value": 25
+            },
+            "源点云降采样": {
+                "ID": "RANSAC.SrcDownSamp",
+                "Value": 10
+            },
+            "目标点云降采样": {
+                "ID": "RANSAC.TgtDownSamp",
+                "Value": 10
+            }
+        },
+        "SFPCS": {
+            "Delta": {
+                "ID": "SFPCS.Delta",
+                "Value": 5
+            },
+            "Epsilon": {
+                "ID": "SFPCS.Epsilon",
+                "Value": 1e-06
+            },
+            "MaxIterations": {
+                "ID": "SFPCS.MaxIterations",
+                "Value": 1000
+            },
+            "MaxTime": {
+                "ID": "SFPCS.MaxTime",
+                "Value": 20
+            },
+            "NumOfSamples": {
+                "ID": "SFPCS.NumOfSamples",
+                "Value": 1000
+            },
+            "Overlap": {
+                "ID": "SFPCS.Overlap",
+                "Value": 0.5
+            },
+            "源点云降采样": {
+                "ID": "SFPCS.SrcDownSamp",
+                "Value": 10
+            },
+            "目标点云降采样": {
+                "ID": "SFPCS.TgtDownSamp",
+                "Value": 10
+            }
+        }
+    },
+    "精配准": {
+        "ICP": {
+            "Epsilon": {
+                "ID": "ICP.Epsilon",
+                "Value": 1e-06
+            },
+            "MaxIterations": {
+                "ID": "ICP.MaxIterations",
+                "Value": 100
+            },
+            "源点云降采样": {
+                "ID": "ICP.SrcDownSamp",
+                "Value": 3
+            },
+            "目标点云降采样": {
+                "ID": "ICP.TgtDownSamp",
+                "Value": 3
+            }
+        },
+        "Methods": {
+            "ID": "Precise.Methods",
+            "Options": [
+                "ICP",
+                "NICP"
+            ],
+            "Type": "Enum",
+            "Value": 1
+        },
+        "NICP": {
+            "Epsilon": {
+                "ID": "NICP.Epsilon",
+                "Value": 1e-05
+            },
+            "MaxIterations": {
+                "ID": "NICP.MaxIterations",
+                "Value": 100
+            },
+            "法线半径": {
+                "ID": "NICP.NormalRadius",
+                "Value": 6
+            },
+            "源点云降采样": {
+                "ID": "NICP.SrcDownSamp",
+                "Value": 1
+            },
+            "目标点云降采样": {
+                "ID": "NICP.TgtDownSamp",
+                "Value": 1
+            }
+        }
+    }
+}
