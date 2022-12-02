@@ -22,8 +22,8 @@ namespace WeldIdentify
         public PointCloudOfXYZ pcCur;
 
         //配准算法
-        private IterativeClosestPoint<PointCloudOfXYZ, PointCloudOfXYZ> icp;
-        private TransformationEstimationPointToPlane<PointCloudOfXYZ, PointCloudOfXYZ> te;
+        public IterativeClosestPoint<PointCloudOfXYZ, PointCloudOfXYZ> icp;
+        public TransformationEstimationPointToPlane<PointCloudOfXYZ, PointCloudOfXYZ> nicp;
 
         //获取当前点云
         public abstract void GetCurPointCloud();
