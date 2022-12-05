@@ -73,7 +73,7 @@ namespace WeldIdentify
                     }
                 default:
                     {
-                        cam2d = null;
+                        cam2d = new Carera2DTest();
                         break;
                     }
             }
@@ -86,20 +86,20 @@ namespace WeldIdentify
                     }
                 default:
                     {
-                        cam3dRegis = null;
+                        cam3dRegis = new CareraRegisTest();
                         break;
                     }
             }
             switch (frmS.cam3dRecogSoftware)
             {
-                case "BCV3DEyeInHand":
+                case "TracerStudio":
                     {
                         cam3dRecog = new CareraRecogChishine();
                         break;
                     }
                 default:
                     {
-                        cam3dRegis = null;
+                        cam3dRecog = new CareraRecogTest();
                         break;
                     }
             }
@@ -112,16 +112,19 @@ namespace WeldIdentify
                     }
                 default:
                     {
-                        robot = null;
+                        robot = new RobotControlTest();
                         break;
                     }
             }
 
             //初始化视觉软件及机器人控制软件
             OpenVisionSoftware(cam2d, ref panel2D);
-            OpenVisionSoftwareWithoutSocket(cam3dRegis, ref panel3DRegis);
+            //OpenVisionSoftware(cam3dRegis, ref panel3DRegis);
             OpenVisionSoftware(cam3dRecog, ref panel3DRecog);
-            //OpenRobotControl(robot,ref panelRobot);
+            //OpenVisionSoftware(robot, ref panelRobot);
+
+            OpenVisionSoftwareWithoutSocket(cam3dRegis, ref panel3DRegis);
+            OpenVisionSoftwareWithoutSocket(robot, ref panelRobot);
         }
 
         private void frmWeldIdentify_FormClosed(object sender, FormClosedEventArgs e)

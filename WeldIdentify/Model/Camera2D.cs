@@ -49,4 +49,36 @@ namespace WeldIdentify
 
         }
     }
+
+    public class Carera2DTest : Camera2D
+    {
+        public Carera2DTest()
+        {
+            method = "2D";
+            proName = "BCVWeldTrack";
+            frmName = "BCVWeldTrackMainForm";
+            ip = "127.0.0.1";
+            port = 5020;
+        }
+
+        public override void SendCMD()
+        {
+
+        }
+
+        public override void FindInitWeldPoint()
+        {
+
+        }
+
+        public override void StartTrack()
+        {
+
+        }
+
+        public override void StopTrack()
+        {
+
+        }
+    }
 }

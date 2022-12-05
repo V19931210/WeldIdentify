@@ -57,14 +57,39 @@ namespace WeldIdentify
         public CareraRecogChishine()
         {
             method = "3DRecog";
+            proName = "TracerStudio";
+            frmName = "TracerStudio";
+            ip = "127.0.0.1";
+            port = 5212;
+        }
+    }
+
+    public class CareraRegisTest : Camera3DRegis
+    {
+        public CareraRegisTest()
+        {
+            method = "3DRegis";
+            proName = "3DPreciseLocate";
+            frmName = "3DPreciseLocateForm";
+            ip = "127.0.0.1";
+            port = 5120;
+        }
+
+        public override void GetCurPointCloud()
+        {
+
+        }
+    }
+
+    public class CareraRecogTest : Camera3DRecog
+    {
+        public CareraRecogTest()
+        {
+            method = "3DRecog";
             proName = "BCV3DEyeInHand";
             frmName = "BCV3DEyeInHand";
             ip = "127.0.0.1";
             port = 5212;
         }
     }
-
-
-
-
 }

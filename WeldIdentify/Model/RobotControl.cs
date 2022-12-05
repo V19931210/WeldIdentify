@@ -25,8 +25,21 @@ namespace WeldIdentify
     {
         public RobotControlCypWeld()
         {
+            method = "Robot";
             proName = "CypWeld";
             frmName = "CypWeld";
+            ip = "127.0.0.1";
+            port = 5060;
+        }
+    }
+
+    public class RobotControlTest : RobotControl
+    {
+        public RobotControlTest()
+        {
+            method = "Robot";
+            proName = "robotplugin";
+            frmName = "PointCloud";
             ip = "127.0.0.1";
             port = 5060;
         }
