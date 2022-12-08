@@ -1,0 +1,117 @@
+;
+; File Name:
+;		slusb.inf
+;
+; Abstract:
+;		Senselock usb device driver information file
+;
+; Environment:
+;		kernel mode only
+;
+; Notes:
+;
+; Author:
+;		nianll
+;
+; Date:
+;		07/12/2018
+;
+; Revision History:
+;		08/06/2004		created by nianll(slmikey.inf)
+;		10/27/2007		modify by nianll(slmikey.inf)
+;		05/30/2008		modify by nianll(elite.inf)
+;		16/01/2009		modify by nianll(slusb.inf)
+;		02/24/2011		modified by huangj(slusb.inf)
+;               12/21/2017              modified by zhangws(slusb.inf)
+;               07/12/2018              modified by liuyf(slusb.inf)
+
+[Version]
+Signature = "$Windows NT$"
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%Senselock%
+CatalogFile=slusb.cat
+DriverVer=07/12/2018,5.2.0.0
+
+[DestinationDirs]
+slusb.File.NT = 10,System32\Drivers
+
+[slusb.File.NT]
+slusb.sys,,,%COPY_FLAG_NOSKIP%
+
+[SourceDisksNames]
+1=%SenseDriverDisk%
+
+[SourceDisksFiles.x86]
+slusb.sys=1,i386
+
+[SourceDisksFiles.amd64]
+slusb.sys=1,x64
+
+[Manufacturer] 
+%Senselock%=Senselock, NTx86, NTamd64
+
+[Senselock]
+%Elite4Desc%=slusb_Inst, USB\VID_0471&PID_485D
+%Elite4Desc%=slusb_Inst, USB\VID_1BC0&PID_0014
+%EliteEDesc%=slusb_Inst, USB\VID_1BC0&PID_0013
+%iTokenDesc%=slUsb_Inst, USB\VID_1BC0&PID_0020
+%MikeyDesc%=slUsb_Inst, USB\VID_1BC0&PID_0021
+
+[Senselock.NTx86]
+%Elite4Desc%=slusb_Inst, USB\VID_0471&PID_485D
+%Elite4Desc%=slusb_Inst, USB\VID_1BC0&PID_0014
+%EliteEDesc%=slusb_Inst, USB\VID_1BC0&PID_0013
+%iTokenDesc%=slUsb_Inst, USB\VID_1BC0&PID_0020
+%MikeyDesc%=slUsb_Inst, USB\VID_1BC0&PID_0021
+
+[Senselock.NTamd64]
+%Elite4Desc%=slusb_Inst, USB\VID_0471&PID_485D
+%Elite4Desc%=slusb_Inst, USB\VID_1BC0&PID_0014
+%EliteEDesc%=slusb_Inst, USB\VID_1BC0&PID_0013
+%iTokenDesc%=slUsb_Inst, USB\VID_1BC0&PID_0020
+%MikeyDesc%=slUsb_Inst, USB\VID_1BC0&PID_0021
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Windows vista
+; slusb install section
+[slusb_Inst.NT]
+CopyFiles = slusb.File.NT
+
+[slusb_Inst.NT.Services] 
+AddService = slusb,0x00000002,slusb_Service_Inst.NT,
+
+[slusb_Service_Inst.NT]
+DisplayName = %slusbServDesc%
+ServiceType = %SERVICE_KERNEL_DRIVER%
+StartType = %SERVICE_DEMAND_START%
+ErrorControl = %SERVICE_ERROR_NORMAL%
+ServiceBinary = %10%\System32\Drivers\slusb.sys
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; strings
+
+[Strings] 
+Senselock= "Beijing Senselock Corp."
+SenseDriverDisk= "Senselock Usb Token Device Install"
+Elite4Desc= "Senselock EliteIV v2.x"
+EliteEDesc= "Senselock Elite-e v2.x"
+iTokenDesc= "Senselock iToken"
+MikeyDesc= "Senselock Mikey"
+slusbServDesc= "Senselock Usb Token Service"
+
+SERVICE_BOOT_START = 0x0
+SERVICE_SYSTEM_START = 0x1
+SERVICE_AUTO_START = 0x2
+SERVICE_DEMAND_START = 0x3
+SERVICE_DISABLED = 0x4
+
+SERVICE_KERNEL_DRIVER = 0x1
+SERVICE_ERROR_IGNORE = 0x0
+SERVICE_ERROR_NORMAL = 0x1
+SERVICE_ERROR_SEVERE = 0x2
+SERVICE_ERROR_CRITICAL = 0x3
+
+ReaderNumInit = 0x02
+
+COPY_FLAG_NOSKIP = 0x2

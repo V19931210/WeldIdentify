@@ -1,0 +1,552 @@
+[
+    {
+        "Narrow": {
+            "m_hpitchOffset": -15,
+            "m_hrollOffset": -7,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": -45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 20
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": -15,
+            "m_hrollOffset": -7,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 0,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 21
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": -15,
+            "m_hrollOffset": -7,
+            "m_vpitchOffset": -15,
+            "m_vrollOffset": -7
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 0,
+                "m_pitchStart": 0,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 22
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": -7,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": -45,
+                "m_pitchStart": 0,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 23
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 0,
+            "m_hrollOffset": -7,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 24
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 0,
+            "m_hrollOffset": -7,
+            "m_vpitchOffset": -15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 25
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 0,
+            "m_hrollOffset": -7,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": -45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 26
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 28
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": -45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 29
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 40
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 41
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 30,
+                "m_pitchStart": 30,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": -45,
+                "m_pitchStart": -45,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            },
+            {
+                "m_endOffset": 0,
+                "m_featureType": 1,
+                "m_pitchEnd": 45,
+                "m_pitchStart": 45,
+                "m_reverse": true,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 42
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 0,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 0,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 0,
+                "m_pitchStart": 0,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 50
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 0,
+                "m_pitchStart": 0,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 51
+    },
+    {
+        "Narrow": {
+            "m_hpitchOffset": 15,
+            "m_hrollOffset": 0,
+            "m_vpitchOffset": 15,
+            "m_vrollOffset": 0
+        },
+        "param": [
+            {
+                "m_endOffset": 0,
+                "m_featureType": 0,
+                "m_pitchEnd": 0,
+                "m_pitchStart": 0,
+                "m_reverse": false,
+                "m_roll": 0,
+                "m_startOffset": 0,
+                "m_valid": true
+            }
+        ],
+        "safeDistance": 20,
+        "weldType": 52
+    }
+]

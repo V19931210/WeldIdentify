@@ -1,0 +1,146 @@
+QGraphicsView {
+    border: none;
+}
+
+QHeaderView
+{
+    background-color:#000000;
+    border:1px solid #232427;
+}
+
+QHeaderView:section
+{
+    background-color:#373a3e;
+    border:1px solid #3b3e44;
+    border-top:1px solid #232427;
+    margin:0px;
+    padding:0px;
+}
+QHeaderView:section:first
+{
+    background-color:#373a3e;
+    border-top:1px solid #232427;
+    border-left:1px solid #232427;
+    margin:0px;
+    padding:0px;
+}
+QHeaderView:section:last
+{
+    background-color:#373a3e;
+    border-top:1px solid #232427;
+    border-right:1px solid #232427;
+    margin:0px;
+    padding:0px;
+}
+
+QHeaderView::section::vertical
+{
+    border-top: transparent;
+}
+
+QHeaderView
+{
+    border: transparent;
+    margin: 0px;
+    padding: 0px;
+}
+QHeaderView::section
+{
+    color: white;
+    border: 1px solid #454545;
+    text-align: center;
+}
+
+QHeaderView::section::vertical
+{
+    border-top: transparent;
+}
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #454545;
+}
+
+QHeaderView::section::horizontal
+{
+    border-left: transparent;
+}
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #454545;
+}
+
+QHeaderView::section:checked
+{
+    color: white;
+    background-color: #2D2E30;
+}
+
+QTreeWidget {
+    font-size:15px;
+    border: 1px solid rgb(23,24,26);
+    color: rgb(146,146,146);
+    background-color: rgb(47,48,55);
+    gridline-color: #3b3d44;
+    selection-background-color: #171719;
+    outline: 0px;
+}
+
+QTreeWidget::indicator {
+    /*color: rgb(146,146,146);
+    background-color: rgb(102,102,102);*/
+    border: 1px solid rgb(77,81,88);
+
+}
+
+QTreeWidget::branch { 
+    border: 1px solid rgb(77,81,88);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    font-size:15px;
+   /* color:rgb(255,0,0);*/
+}
+
+QTreeWidget::branch:open:has-children {
+   image: url(:/Resource/Images/btn_arrow_more_show.png);
+   padding-left: 2px;
+   background-color:rgb(47,48,55);
+}
+
+QTreeWidget::branch:closed:has-children {
+   image: url(:/Resource/Images/btn_arrow_sreen_right_normal.png);
+   padding-left: 2px;
+   background-color:rgb(47,48,55);
+ }
+
+QTreeWidget::item { 
+    font-size:15px;
+    height: 24px;
+    color: #F2F2F2;
+    border: 1px solid rgb(77,81,88);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    background-color:rgb(47,48,55);
+}
+
+QTreeView::item:selected {
+  background-color:#171719;
+}
+QTreeView::item:pressed {
+  background-color:#171719;
+}
+
+QTreeView::item:hover {
+    background-color: #171719;
+}
+
+QTreeWidget[isFirTree = true]::branch:hover, QTreeWidget[isFirTree = true]::branch:alternate:hover {
+     background-color: rgb(255,0,0);
+}
+
+
+QTreeWidget[isFirTree = true]::item:hover, QTreeWidget[isFirTree = true]::item:alternate:hover {
+     background-color: rgb(255,0,0);
+}

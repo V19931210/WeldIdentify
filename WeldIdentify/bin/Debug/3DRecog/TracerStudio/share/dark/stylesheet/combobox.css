@@ -1,0 +1,231 @@
+QComboBox {
+    font-size: 16px;
+    selection-background-color: #1f1f1f;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border: 1px solid #5f6472;
+    border-radius: 2px;
+    padding-left: 2px;
+    min-height:28px;
+    color: #222222;
+    height: 24px;
+}
+
+QComboBox:hover {
+    background-color: #1b1d20;
+    border: 1px solid #999999;
+    color: #F2F2F2;
+}
+
+QComboBox:pressed {
+    background-color: #1b1d20;
+    color: #d6d6d6;
+    border-color: #e2640c;
+}
+
+QComboBox:focus {
+    background-color: #1d1d1d;
+    color: #F2F2F2;
+    border-color: #e2640c;
+}
+
+QComboBox:disabled {
+    background-color: #28292c;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+QComboBox:on {
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+QComboBox QAbstractItemView
+{
+    border: 1px solid #606060;
+    color: #929292; 
+    margin: 0px;
+    background:#1d1d1d;
+    border-radius: 4px;
+    selection-color: #F2F2F2;
+    selection-background-color: #e67007;
+}
+
+QComboBox QAbstractItemView::item
+{
+    height: 36px;
+    color: #929292;
+    margin: 0px;
+    background: #1d1d1d;
+}
+ 
+QComboBox QAbstractItemView::item:selected {
+    height: 36px;
+    background-color: #e67007;
+    color: #F2F2F2;
+    margin: 0px;
+}
+
+QListView{
+font-size: 15px;
+}
+QComboBox QListView::item {
+    height: 36px;
+    color: #929292;
+    margin: 0px;
+    background: #1d1d1d;
+}
+
+QComboBox QListView::item:selected {
+    height: 36px;
+    background-color: #e67007;
+    color: #F2F2F2;
+    selection-color: #F2F2F2;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow:disabled {
+    image: url(:/Resource/Images/combox/combBoxDown_normal.png);
+    padding-right: 12px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/Resource/Images/combox/combBoxDown_normal.png);
+    padding-right: 12px;
+}
+
+QComboBox::down-arrow:on, 
+QComboBox::down-arrow:hover,
+QComboBox::down-arrow:focus {
+
+    image: url(:/Resource/Images/combox/combBoxDown_hover.png);
+}
+QComboBox::down-arrow:pressed {
+    image: url(:/Resource/Images/combox/combBoxDown_pressed.png);
+}
+
+QComboBox[backgroundcolor]{
+    background-color: #FFFFFF;
+    color:#000000;
+}
+QComboBox[switchbox]{
+   background-color:rgb(42,42,44);
+   color:#ffffff;
+   border-style: none;
+}
+QComboBox[switchbox]::down-arrow:disabled{
+  border-style: none;
+}
+/*******************************************************************************************************/
+QLineEdit
+{
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 15px;
+    height:28px;
+    color:#000000
+}
+
+QLineEdit[browseedit=false]
+{
+    background-color: rgb(239,146,179);
+}
+
+
+QLineEdit:disabled
+{
+    background-color: rgb(43,43,43);
+    border: 1px solid rgb(29,29,32);
+    border-radius: 3px;
+    padding-left: 5px;
+    color:#ffffff;
+}
+
+QLineEdit[portedit] {
+    background-color: #FFFFFF;
+    color:#000000;
+    font-size: 16px;
+}
+QLineEdit[monitor] {
+    color:#FFFFFF;
+    font-size: 16px;
+}
+
+QLineEdit[noborderlineedit=true] {
+    background-color: #1b1d20;
+    color: #cccccc;
+    border: none;
+    border-radius: 0px;
+
+}
+
+QLineEdit[noborderlineedit=true]:hover {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #999999;
+}
+
+QLineEdit[noborderlineedit=true]:pressed {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #e2640c;
+}
+
+QLineEdit[noborderlineedit=true]:focus {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #e2640c;
+}
+
+
+
+
+
+/*QLineEdit[alignname] {
+    background-color: #FFFFFF;
+    font-size: 15px;
+    color:#000000
+}
+QLineEdit[alignname]:disabled
+{
+    background-color: rgb(35,37,42);
+    border: 1px solid rgb(35,37,42);
+    color:#ffffff;
+}*/
+
+/**************************************************QTextEdit²¿·Ö**********************************************/
+QTextEdit{
+
+    background-color:rgb(34,34,34); 
+        border:2px solid rgb(22,22,22);
+        color: #F2F2F2;
+	selection-background-color: rgb(83,83,83);
+}
+
+QTextEdit[welderDetail]{
+
+    background-color: transparent;
+    border:none;
+    font-size: 24px;
+    padding-left:5px;
+}
+
+QTextEdit[nonebordertextedit]{
+    background-color: transparent;
+    border:none;
+    font-size:15px;
+    padding-left:0px;
+    padding-top:0px;
+}

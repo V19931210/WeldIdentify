@@ -1,0 +1,101 @@
+Tool(tool_C3D);
+DOSet(DO9,FALSE);
+i:=1;
+WHILE(i<=pathNum)DO
+pathSerial := i;
+WaitIsFinished();
+messageNum := 10000;
+WaitIsFinished();
+ProgCall(C3D_Request);
+IF(i==1)THEN
+safe_point:=CARTPOSEXTRead(1);
+safe_point.Z:=safe_z;
+PTP(safe_point,NULL,NULL,tool_C3D,WORLD);
+END_IF
+i:=i+1;
+IF(read_step==1080)THEN
+Lin(transStart,NULL,NULL,NULL,tool_C3D,WORLD);
+IF(weldType==0)THEN
+IF(gap<6)THEN
+C3D_arcMode:=arcMode_1;
+C3D_arcon:=arcondata_1;
+C3D_arcdata:=arcdata_1;
+C3D_weave:=weavedata_1;
+C3D_track:=trackdata_1;
+C3D_arcoff:=arcoffdata_1;
+ELSIF(gap>=6)THEN
+C3D_arcMode:=arcMode_2;
+C3D_arcon:=arcondata_2;
+C3D_arcdata:=arcdata_2;
+C3D_weave:=weavedata_2;
+C3D_track:=trackdata_2;
+C3D_arcoff:=arcoffdata_2;
+END_IF
+ELSIF(weldType==1)THEN
+IF(gap<6)THEN
+C3D_arcMode:=arcMode_3;
+C3D_arcon:=arcondata_3;
+C3D_arcdata:=arcdata_3;
+C3D_weave:=weavedata_3;
+C3D_track:=trackdata_3;
+C3D_arcoff:=arcoffdata_3;
+ELSIF(gap>=6)THEN
+C3D_arcMode:=arcMode_4;
+C3D_arcon:=arcondata_4;
+C3D_arcdata:=arcdata_4;
+C3D_weave:=weavedata_4;
+C3D_track:=trackdata_4;
+C3D_arcoff:=arcoffdata_4;
+END_IF
+END_IF
+ARCMODE(C3D_arcMode);
+Lin(weldPoint1,NULL,NULL,NULL,tool_C3D,WORLD);
+ARCON(C3D_arcon,C3D_arcdata);
+SWITCH(weldPointNum)
+CASE 0:
+Message("wrong",eInfo);
+CASE 2:
+WLin(weldPoint2,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+CASE 3:
+WLin(weldPoint2,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint3,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+CASE 4:
+WLin(weldPoint2,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint3,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint4,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+CASE 5:
+WLin(weldPoint2,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint3,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint4,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint5,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+CASE 6:
+WLin(weldPoint2,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint3,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint4,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint5,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint6,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+CASE 7:
+WLin(weldPoint2,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint3,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint4,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint5,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint6,NULL,Z0,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint7,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+CASE 8:
+WLin(weldPoint2,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint3,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint4,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint5,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint6,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint7,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+WLin(weldPoint8,NULL,NULL,NULL,C3D_weave,C3D_track,tool_C3D,WORLD);
+END_SWITCH
+ARCOFF(C3D_arcoff);
+Lin(transEnd,NULL,NULL,NULL,tool_C3D,WORLD);
+END_IF
+END_WHILE
+safe_point:=CARTPOSEXTRead(10);
+safe_point.Z:=safe_z;
+Lin(safe_point,NULL,NULL,NULL,tool_C3D,WORLD);
+DOSet(DO9,TRUE);
+//Lin(PVision,NULL,NULL,NULL,tool_C3D,WORLD);

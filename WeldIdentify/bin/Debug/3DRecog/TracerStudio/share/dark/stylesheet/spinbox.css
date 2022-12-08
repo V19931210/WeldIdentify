@@ -1,0 +1,82 @@
+/*********************************************QSpinBox*******************************************/
+/*/QAbstractSpinBox {
+    background-color: #ffffff;
+    selection-background-color: #646671;
+    color: #000000;
+    border: 1px solid #5f6472;
+    border-radius: 2px;
+    height: 16px;
+    font-size: 14px;
+}
+
+QAbstractSpinBox:hover {
+    border: 1px solid #999999;
+}
+
+QAbstractSpinBox:pressed {
+    border: 1px solid #e2640c;
+}
+
+QAbstractSpinBox:focus {
+    border: 1px solid #e2640c;
+}
+
+QAbstractSpinBox:disabled {
+    background-color: #28292c;
+    color: #666666;
+    border: 1px solid #000000;
+}
+
+QSpinBox[iproperty]::up-button,QSpinBox[iproperty]::down-button{
+    width:0px;
+}*/
+
+QAbstractSpinBox {
+    background-color: #1b1d20;
+    selection-background-color: #646671;
+    color: #cccccc;
+    border: 1px solid #5f6472;
+    border-radius: 4px;
+    height: 16px;
+    font-size: 14px;
+}
+
+QAbstractSpinBox:hover {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #999999;
+}
+
+QAbstractSpinBox:pressed {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #e2640c;
+}
+
+QAbstractSpinBox:focus {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #e2640c;
+}
+
+QAbstractSpinBox:disabled {
+    background-color: #28292c;
+    color: #666666;
+    border: 1px solid #000000;
+}
+
+QDoubleSpinBox[noborderspinbox=true]{
+     border:none;
+     background-color: transparent;
+}
+QDoubleSpinBox[noborderspinbox=true]:pressed {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #e2640c;
+}
+
+QDoubleSpinBox[noborderspinbox=true]:focus {
+    background-color: #1b1d20;
+    color: #ffffff;
+    border: 1px solid #e2640c;
+}

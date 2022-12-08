@@ -1,0 +1,36 @@
+LP:stepRetry;
+DINTEXTSet(dintext0,reset);
+WaitIsFinished();
+DINTEXTSet(dintext1,processNum);
+WaitIsFinished();
+DINTEXTSet(dintext2,weldUnitNum);
+WaitIsFinished();
+DINTEXTSet(dintext3,serialNum);
+WaitIsFinished();
+DINTEXTSet(dintext4,commandNum);
+WaitIsFinished();
+DINTEXTSet(dintext5,workpieceNum);
+WaitIsFinished();
+DINTEXTSet(dintext6,exposureValue);
+WaitIsFinished();
+DINTEXTSet(dintext9,pathSerial);
+WaitIsFinished();
+DINTEXTSet(dintext0,messageNum);
+WaitIsFinished();
+read_step:=DINTEXTRead(dintext0);
+WHILE(read_step!=1080&&read_step!=1085&&read_step!=1020)DO 
+    read_step:=DINTEXTRead(dintext0);
+    WaitTime(t);
+END_WHILE
+IF(read_step==1085)THEN 
+Message("wrong",eInfo);
+GOTO(stepRetry);
+END_IF
+pathNum:=DINTEXTRead(dintext10);
+WaitIsFinished();
+weldPointNum:=DINTEXTRead(dintext11);
+WaitIsFinished();
+weldType:=DINTEXTRead(dintext12);
+WaitIsFinished();
+gap:=REALEXTRead(realext12);
+WaitIsFinished();

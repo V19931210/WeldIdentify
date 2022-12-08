@@ -1,0 +1,285 @@
+QToolButton
+{
+    background-color:rgb(66,66,77);
+    color:#F2F2F2;
+    font-size:12px;
+    border-radius:3px;
+    padding-left:5px;
+    padding-right:5px;
+    font-size:17px;
+}
+
+QToolButton:hover
+{
+    background-color:rgb(85,85,95);
+    color:rgb(255,255,255);
+    font-size:17px;
+}
+
+QToolButton:pressed
+{
+    background-color:rgb(23,24,26);
+    color:rgb(233,127,32);
+    font-size:17px;
+}
+
+QToolButton:disabled
+{
+    background-color:rgb(61,64,70);
+    color:rgb(120,120,120);
+    font-size:17px;
+}
+
+QToolButton[popupMode="1"] { /* only for MenuButtonPopup */
+    /*padding-right: 20px;  make way for the popup button */
+    border:none;
+}
+
+QToolButton[popupMode="2"]{ /* only for InstantPopup */
+    /*padding-right: 20px;  make way for the popup button */
+    border: none;
+}
+
+
+QToolButton QLabel,QToolButton QFrame
+{
+    background-color:transparent;
+}
+QToolButton[isDelete=true]
+{
+    background-color: #BB4949;
+}
+QToolButton[isDelete=true]:hover
+{
+    background-color: #BB4949;
+}
+
+QToolButton::menu-button:hover,QToolButton[isToolBarButton=true]::menu-button:hover
+{
+    background-color: transparent;
+    border: none;
+}
+
+QToolButton:checked, QToolButton:pressed,QToolButton[isToolBarButton=true]:pressed
+{
+    background-color: transparent;
+    border: #6a6a6a;
+}
+
+QToolButton[noCheckedBG=true]:checked
+{
+    background-color: transparent;
+    border:none;
+}
+
+QToolButton[noCheckedBG=true]:pressed
+{
+    background-color: transparent;
+    border: none;
+}
+
+
+
+QToolButton[noCheckedBG=true]:hover
+{
+    background-color: transparent;
+    border: none;
+}
+/**
+* menu-button 为有效点击区域
+* menu-arrow 为箭头显示区域
+*/
+QToolButton::menu-button:pressed,QToolButton[isToolBarButton=true]::menu-button:pressed
+{
+    background-color:transparent;
+    border: none;
+}
+/* the subcontrol below is used only in the InstantPopup or DelayedPopup mode */
+QToolButton::menu-indicator,QToolButton[isToolBarButton=true]::menu-indicator
+{
+    /*width:20px;*/
+    /*height:24px;*/
+    image: url(arpaTheme.image.toolbutton_menu_indicator_normal);
+
+}
+QToolButton[popupMode="1"]::menu-button,QToolButton[popupMode="1"][isToolBarButton=true]::menu-button
+{
+/*    left: -5px;*/
+}
+QToolButton[popupMode="2"]::menu-button,QToolButton[popupMode="2"][isToolBarButton=true]::menu-button
+{
+/*    left: -5px;*/
+}
+QToolButton::menu-button,QToolButton[isToolBarButton=true]::menu-button
+{
+    width:24px;
+    border: none;
+}
+
+QToolButton::menu-arrow,QToolButton[isToolBarButton=true]::menu-arrow
+{
+    /*width:24px;*/
+    /*height:24px;*/
+    image: url(arpaTheme.image.toolbutton_menu_indicator_normal);
+}
+
+QToolButton::menu-arrow:open,QToolButton[isToolBarButton=true]::menu-arrow:open
+{
+    border: transparent;
+}
+
+
+QToolButton[isToolBarButton=true]:hover
+{
+    background-color: #36383e;
+    color: #F2F2F2;
+    border: 1px solid #929292;
+}
+
+QToolButton[isToolBarButton=true]:pressed
+{
+    background-color: #1c1c1c;
+    color: #F2F2F2;
+    border: 1px solid #929292;
+}
+
+QToolButton[isToolBarButton=true][popupMode="1"] { /* only for MenuButtonPopup */
+    border-radius:14px;
+    border: 1px solid #4d5158;
+    padding-left:-13px;
+    padding-right:13px;
+}
+
+QToolButton[isToolBarButton=true][popupMode="2"] { /* only for InstantPopup */
+    border-radius:14px;
+    border: 1px solid #4d5158;
+    padding-left:-13px;
+    padding-right:13px;
+}
+
+QToolButton[isToolBarButton=true][popupMode="1"]:hover,
+QToolButton[isToolBarButton=true][popupMode="2"]:hover
+{
+    background-color: #36383e;
+    color: #F2F2F2;
+    border: 1px solid #929292;
+}
+
+QToolButton[isToolBarButton=true][popupMode="1"]:pressed,
+QToolButton[isToolBarButton=true][popupMode="2"]:pressed
+{
+    background-color: #1c1c1c;
+    color: #fdfdfd;
+    border: 1px solid #929292;
+}
+/*状态栏语言切换按钮*/
+QToolButton[isStatusBarLanguageButton=true]::menu-indicator
+{
+    image: none;
+}
+/*标题栏的Logo按钮*/
+QToolButton[isTitleBarLogoButton=true]:hover,
+ToolButton[isTitleBarLogoButton=true]:pressed
+{
+    border-style: flat;
+    background-color: transparent;
+    border:none;
+}
+/*标题栏的关闭按钮*/
+QToolButton[isTitleBarCloseButton=true]
+{
+    image: url(:/Resource/Images/btn_close_normal.png);
+    background-color: transparent;
+}
+QToolButton[isTitleBarCloseButton=true]:hover
+{
+    background-color: #DE5A5A;
+    image: url(:/Resource/Images/btn_close_hover.png);
+}
+QToolButton[isTitleBarCloseButton=true]:pressed
+{
+    background-color: #D23939;
+}
+/*标题栏的最小化按钮*/
+QToolButton[isTitleBarMinButton=true]
+{
+    image: url(:/Resource/Images/btn_mix_normal.png);
+    background-color: transparent;
+}
+/*标题栏的最大化按钮*/
+QToolButton[isTitleBarMaxButton=true]
+{
+    image: url(:/Resource/Images/btn_max_normal.png);
+    background-color: transparent;
+}
+/*标题栏的恢复按钮*/
+QToolButton[isTitleBarRestoreButton=true]
+{
+    image: url(:/Resource/Images/btn_return_normal.png);
+    background-color: transparent;
+}
+/*前景图标*/
+QToolButton[isForeground=true]
+{
+    border:1px solid #343434;
+    background-color: #454545;
+}
+/*主窗体右上角的带下拉菜单的按钮*/
+QToolButton[isMainWindowMenuButton=true]
+{
+    width:47px;
+    height:24px;
+    padding-right:20px;
+}
+QToolButton[isMainWindowMenuButton=true]:pressed
+{
+    border-radius:3px;
+    background-color: #3A3A3A;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+QToolButton[isMainWindowMenuButton=true]::menu-button
+{
+    width:47px;
+}
+QToolButton[isMainWindowMenuButton=true]::menu-arrow
+{
+     subcontrol-position:right;
+     subcontrol-origin: margin;
+}
+/* the subcontrol below is used only in the InstantPopup or DelayedPopup mode */
+QToolButton[isMainWindowMenuButton=true]::menu-indicator
+{
+    /*width:20px;*/
+    /*height:24px;*/
+    image: url(arpaTheme.image.toolbutton_menu_indicator_normal);
+}
+
+QToolButton[weldertoolbutton]
+{
+   padding-right:25px;
+   border-bottom:1px solid rgb(12,12,12);
+   border-radius:0px;
+   font-size:28px;
+  /* font-weight: bold;*/
+}
+QToolButton[weldertoolbutton]:checked
+{
+   background-color: #007ACC;
+}
+
+QToolButton[backgroundcustom]
+{
+   padding-right:25px;
+   border-bottom:1px solid rgb(12,12,12);
+   border-radius:0px;
+   font-size:28px;
+}
+QToolButton[backgroundcustom]:checked
+{
+   background-color: #e2640c;
+}
+
+QToolButton[modeindex = "EncryptunAvailable"]{
+   background-color: #077aa6;
+}

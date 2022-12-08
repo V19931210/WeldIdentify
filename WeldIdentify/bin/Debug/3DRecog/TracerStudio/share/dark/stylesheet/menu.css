@@ -1,0 +1,20 @@
+QMenu {
+    border: 1px solid #868686;
+    color: #929292;
+    margin: 1px;
+    background-color: #1d1d1d;
+    font-size: 16px;
+    /* border-radius: 4px;*/
+}
+
+QMenu::icon {
+    margin: 5px;
+}
+
+QMenu::item {
+    height: 18px;
+    padding: 5px 10px 5px 10px;
+    /*   border: 1px solid transparent;*/
+    background-color: #1d1d1d;
+    padding-left: 25px;
+}

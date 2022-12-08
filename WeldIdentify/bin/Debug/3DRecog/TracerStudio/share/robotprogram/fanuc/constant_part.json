@@ -1,0 +1,12 @@
+{
+    "SPEED": {
+        "L": "300mm/sec",
+        "J": "30%"
+    },
+    "CodeHead": "/ATTR\nOWNER\t\t= MNEDITOR;\nCOMMENT\t\t= \"\";\nPROG_SIZE\t= 1389;\nCREATE\t\t= DATE 21-09-22  TIME 10:22:06;\nMODIFIED\t= DATE 21-09-26  TIME 13:40:06;\nFILE_NAME\t= ;\nVERSION\t\t= 0;\nLINE_COUNT\t= 21;\nMEMORY_SIZE\t= 1701;\nPROTECT\t\t= READ_WRITE;\nTCD:  STACK_SIZE\t= 0,\n      TASK_PRIORITY\t= 50,\n      TIME_SLICE\t= 0,\n      BUSY_LAMP_OFF\t= 0,\n      ABORT_REQUEST\t= 0,\n      PAUSE_REQUEST\t= 0;\nDEFAULT_GROUP\t= 1,*,*,*,*;\nCONTROL_CODE\t= 00000000 00000000;\n/APPL\n  ARC Welding Equipment : 1,*,*,*,*;\n/MN\n",
+    "PROCESS": {
+        "part1": "   1:  UFRAME_NUM=1 ;\n   2:  UTOOL_NUM=1 ;\n   3://L P[999] 100mm/sec FINE  ;\n   4:  PR[99]=P[999]    ;\n",
+        "part2": "   6:  CALL C3D_REFOFFS    ;\n   7:  OFFSET CONDITION PR[100] ;\n   8:  CALL C3D('C1','CONNECT') ;\n   9:  CALL C3D('C1','REQUEST',0,1) ;\n"
+    },
+    "C3D_REFOFFS": "   1:  PR[100,1]=0    ;\n   2:  PR[100,2]=0    ;\n   3:  PR[100,3]=0    ;\n   4:  PR[100,4]=0    ;\n   5:  PR[100,5]=0    ;\n   6:  PR[100,6]=0    ;\n   7:  PR[100,5]=0    ;\n   8:  PR[100,6]=0    ;\n   9:  R[50]=R[50]+PR[99,3]   ;\n"
+}

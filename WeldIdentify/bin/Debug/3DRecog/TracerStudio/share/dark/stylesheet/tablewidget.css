@@ -1,0 +1,135 @@
+QTableView {
+    color: #F2F2F2;
+    background-color:#292a30;
+    border: 0px solid #4D5158;
+    outline: none;
+    gridline-color: #4d5158;
+    font-size: 15px;
+    selection-background-color: #171719;
+}
+
+QTableView[DetailContent]{
+     font-size: 21px;
+}
+QTableView::item:pressed {
+    background-color: #171719;
+}
+
+QTableView::item:selected {
+    background-color: #171719;
+}
+
+QHeaderView:section {
+    font-size: 21px;
+    min-height: 28px;
+    min-width: 30px;
+    border: 0px;
+    background-color: #404247;
+    color: #F2F2F2;
+}
+QHeaderView[DetailContent]:section {
+    font-size: 18px;
+ }
+
+QTableWidget[DetailContent]::indicator { /** 指示器 **/
+    font-size: 18px;
+}
+QTableWidget[DetailContent]::item { /** 指示器 **/
+    font-size: 18px;
+}
+
+QHeaderView:section:horizontal {
+    border-left: none;
+    border-bottom: 1px solid #4D5158;
+    border-right: 1px solid #4D5158;
+    border-top: 1px solid #4D5158;
+    background-color: #007ACC;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+
+QHeaderView[paramtablewidget=true]:section:horizontal {
+    border: 1px solid #4D5158;
+    border-left:none;
+    border-bottom:none;
+    background-color: rgb(30, 30, 30);
+    font-size: 14px;
+    text-align:center;
+}
+
+QHeaderView[FeatrueParam=true]:section:horizontal {
+    border: 1px solid #4D5158;
+    border-left:none;
+    border-bottom:none;
+    background-color: #e2640c;
+    font-size: 14px;
+    text-align:center;
+}
+
+QHeaderView:section:vertical {
+    border-left: 1px solid #4D5158;
+    border-bottom: 1px solid #4D5158;
+    border-right: 1px solid #4D5158;
+    border-top: none;
+}
+
+QTableWidget::indicator { /** 指示器 **/
+    font-size: 21px;
+    width: 16px;
+    height: 0px;
+    margin: 2px;
+}
+QTableView::item {
+    font-size: 15px;
+    /*height: 100px;*/
+}
+
+QTableWidget::indicator:enabled:unchecked { /** 指示器 - 未选中 **/
+    image: url(arpaTheme.image.checkbox_unchecked);
+}
+
+QTableWidget::indicator:enabled:unchecked:hover {
+    image: url(arpaTheme.image.checkbox_unchecked);
+}
+
+QTableWidget::indicator:enabled:unchecked:pressed {
+    image: url(arpaTheme.image.checkbox_unchecked);
+}
+
+QTableWidget::indicator:enabled:checked { /** 指示器 - 选中 **/
+    image: url(arpaTheme.image.checkbox_checked);
+}
+
+QTableWidget::indicator:enabled:checked:hover {
+    image: url(arpaTheme.image.checkbox_checked);
+}
+
+QTableWidget::indicator:enabled:checked:pressed {
+    image: url(arpaTheme.image.checkbox_checked);
+}
+
+QTableWidget::indicator:enabled:indeterminate { /** 指示器 - 半选 **/
+    image: url(arpaTheme.image.checkbox_indeterminate);
+}
+
+QTableWidget::indicator:enabled:indeterminate:hover {
+    image: url(arpaTheme.image.checkbox_indeterminate);
+}
+
+QTableWidget::indicator:enabled:indeterminate:pressed {
+    image: url(arpaTheme.image.checkbox_indeterminate);
+}
+
+QTableWidget::indicator:disabled {
+    image: url(arpaTheme.image.checkbox_indeterminate);
+}
+
+QTableView[paramtablewidget]{
+    background-color:transparent;
+    border: 1px solid #4D5158;
+    outline: none;
+    gridline-color: #4d5158;
+    font-size: 12px;
+    selection-background-color: #171719;
+}

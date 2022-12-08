@@ -1,0 +1,154 @@
+; fsusbdrv.inf
+; Driver for Friendess USB Devices
+; WDM/DLL for Windows 98/Me/2000/XP/Vista/64bit XP/64bit Vista
+; Copyright (C) Friendess, Inc. 2005-2012
+;
+
+[Version]
+Signature="$Chicago$"
+Provider  = %Friendess%
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+DriverVer = 07/01/2017, 6.0.2012.0626
+CatalogFile=fsusbdrv.cat
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+[DestinationDirs]
+FsUsbDrv_Files = 12
+FsUsbDrv_Files_NTamd64 = 12
+
+[Manufacturer]
+%Friendess%=Friendess,NT,NTamd64
+
+[Friendess]
+%Cutmax_CtrlPad.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_1202
+%USB\VID_6125&PID_1001.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_1001
+%USB\VID_6125&PID_DC51.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_DC51
+%USB\VID_6125&PID_DC52.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_DC52
+%USB\VID_6125&PID_BC28.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_BC28
+%USB\VID_6125&PID_2801.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_2801
+%USB\VID_6125&PID_2802.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_2802
+%USB\VID_6125&PID_1001.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_F0
+%USB\VID_6125&PID_DC52.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_52
+%USB\VID_6125&PID_BC28.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_BC
+%USB\VID_6125&PID_2801.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_01
+%USB\VID_6125&PID_2802.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_02
+%USB\VID_6125&PID_2803.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_03
+
+[Friendess.NT]
+%Cutmax_CtrlPad.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_1202
+%USB\VID_6125&PID_1001.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_1001
+%USB\VID_6125&PID_DC51.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_DC51
+%USB\VID_6125&PID_DC52.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_DC52
+%USB\VID_6125&PID_BC28.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_BC28
+%USB\VID_6125&PID_2801.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_2801
+%USB\VID_6125&PID_2802.DeviceDesc%=FsUsbDrv, USB\VID_6125&PID_2802
+%USB\VID_6125&PID_1001.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_F0
+%USB\VID_6125&PID_DC52.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_52
+%USB\VID_6125&PID_BC28.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_BC
+%USB\VID_6125&PID_2801.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_01
+%USB\VID_6125&PID_2802.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_02
+%USB\VID_6125&PID_2803.DeviceDesc%=FsUsbDrv, USB\Class_FF&SubClass_80&Prot_03
+
+[Friendess.NTamd64]
+%Cutmax_CtrlPad.DeviceDesc%=FsUsbDrv_NTamd64, USB\VID_6125&PID_1202
+%USB\VID_6125&PID_1001.DeviceDesc%=FsUsbDrv_NTamd64, USB\VID_6125&PID_1001
+%USB\VID_6125&PID_DC51.DeviceDesc%=FsUsbDrv_NTamd64, USB\VID_6125&PID_DC51
+%USB\VID_6125&PID_DC52.DeviceDesc%=FsUsbDrv_NTamd64, USB\VID_6125&PID_DC52
+%USB\VID_6125&PID_BC28.DeviceDesc%=FsUsbDrv_NTamd64, USB\VID_6125&PID_BC28
+%USB\VID_6125&PID_2801.DeviceDesc%=FsUsbDrv_NTamd64, USB\VID_6125&PID_2801
+%USB\VID_6125&PID_2802.DeviceDesc%=FsUsbDrv_NTamd64, USB\VID_6125&PID_2802
+%USB\VID_6125&PID_1001.DeviceDesc%=FsUsbDrv_NTamd64, USB\Class_FF&SubClass_80&Prot_F0
+%USB\VID_6125&PID_DC52.DeviceDesc%=FsUsbDrv_NTamd64, USB\Class_FF&SubClass_80&Prot_52
+%USB\VID_6125&PID_BC28.DeviceDesc%=FsUsbDrv_NTamd64, USB\Class_FF&SubClass_80&Prot_BC
+%USB\VID_6125&PID_2801.DeviceDesc%=FsUsbDrv_NTamd64, USB\Class_FF&SubClass_80&Prot_01
+%USB\VID_6125&PID_2802.DeviceDesc%=FsUsbDrv_NTamd64, USB\Class_FF&SubClass_80&Prot_02
+%USB\VID_6125&PID_2803.DeviceDesc%=FsUsbDrv_NTamd64, USB\Class_FF&SubClass_80&Prot_03
+
+[FsUsbDrv]
+CopyFiles = FsUsbDrv_Files
+CopyInf = fsusbdrv.inf
+AddReg = FsUsbDrv_AddReg
+
+[FsUsbDrv_NTamd64]
+CopyFiles = FsUsbDrv_Files_NTamd64
+CopyInf = fsusbdrv.inf
+AddReg = FsUsbDrv_AddReg_NTamd64
+
+[FsUsbDrv.Services]
+Addservice = FsUsbDrv, 0x00000002, FsUsbDrv_Service_Inst
+
+[FsUsbDrv.NTamd64.Services]
+Addservice = FsUsbDrv, 0x00000002, FsUsbDrv_Service_Inst_NTamd64
+
+[DefaultInstall]
+CopyFiles = FsUsbDrv_Files
+CopyInf = fsusbdrv.inf
+AddReg = FsUsbDrv_AddReg
+
+[DefaultInstall.NTamd64]
+CopyFiles = FsUsbDrv_Files_NTamd64
+CopyInf = fsusbdrv.inf
+AddReg = FsUsbDrv_AddReg_NTamd64
+
+[DefaultInstall.Services]
+Addservice = FsUsbDrv, 0x00000002, FsUsbDrv_Service_Inst
+
+[DefaultInstall.NTamd64.Services]
+Addservice = FsUsbDrv, 0x00000002, FsUsbDrv_Service_Inst_NTamd64
+
+[FsUsbDrv_Service_Inst]
+DisplayName    = %FsUsbDrv.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMANT_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\fsusbdrv.sys
+LoadOrderGroup = Base
+
+[FsUsbDrv_Service_Inst_NTamd64]
+DisplayName    = %FsUsbDrv.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMANT_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\fsusbdrv64.sys
+LoadOrderGroup = Base
+
+[FsUsbDrv_AddReg]
+
+[FsUsbDrv_AddReg_NTamd64]
+
+[FsUsbDrv_Files]
+fsusbdrv.sys
+
+[FsUsbDrv_Files_NTamd64]
+fsusbdrv64.sys
+
+[Strings]
+Friendess="Friendess, Inc."
+FsUsbDrv.SvcDesc="Friendess USB Driver"
+FsUsbDebug.SvcDesc="Friendess USB Driver For Debug"
+USB\VID_6125&PID_1001.DeviceDesc="Wireless pendant System BootLoader"
+USB\VID_6125&PID_DC51.DeviceDesc="Dispenser Control System 5.1"
+USB\VID_6125&PID_DC52.DeviceDesc="Dispenser Control System 5.2"
+USB\VID_6125&PID_BC28.DeviceDesc="BC2801 BootLoader"
+USB\VID_6125&PID_2801.DeviceDesc="BC2801 Motion Controller"
+USB\VID_6125&PID_2802.DeviceDesc="BC2802 Motion Controller"
+USB\VID_6125&PID_2803.DeviceDesc="BC2803 Motion Controller"
+Cutmax_CtrlPad.DeviceDesc="CutMax CtrlKeybrd"
+
+USB\VID_0548&PID_1005.DeviceDesc="MPC6536 Motion Process Card"
+
+[Strings.0804]
+Friendess="上海柏楚电子科技有限公司"
+FsUsbDrv.SvcDesc="柏楚电子从USB设备驱动"
+FsUsbDebug.SvcDesc="柏楚电子从USB设备驱动(Debug)"
+USB\VID_6125&PID_1001.DeviceDesc="无线手持盒 BootLoader"
+USB\VID_6125&PID_DC51.DeviceDesc="点胶控制系统 5.1"
+USB\VID_6125&PID_DC52.DeviceDesc="点胶控制系统 5.2"
+USB\VID_6125&PID_BC28.DeviceDesc="BC2801 BootLoader"
+USB\VID_6125&PID_2801.DeviceDesc="BC2801 运动控制器"
+USB\VID_6125&PID_2802.DeviceDesc="BC2801 运动控制器"
+Cutmax_CtrlPad.DeviceDesc="CutMax手持控制盒"
+USB\VID_0548&PID_1005.DeviceDesc="MPC6536 运动控制卡"

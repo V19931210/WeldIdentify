@@ -1,0 +1,439 @@
+[Version]
+Signature="$Chicago$"
+Provider=%Friendess%
+Class=FSMotionCard
+ClassGUID={CB06C4E1-805E-4AA1-87E8-676AB64C2C8E}
+DriverVer=06/24/2019,19.44.34.477
+CatalogFile=bmc12xAll.cat
+
+;-------------------------------------------------------------------------
+; Class Section
+;-------------------------------------------------------------------------
+[ClassInstall32]
+AddReg=Class_AddReg
+
+[Class_AddReg]
+HKR,,,0,%DeviceClassName%
+HKR,,Icon,,-5
+;HKR,,DeviceCharacteristics,0x10001,0x100     ;Use same security checks on relative opens
+;HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)" ;Allow generic all access to system and built-in Admin.
+
+;-------------------------------------------------------------------------
+; Device Install Section
+;-------------------------------------------------------------------------
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%Friendess%=Friendess,NT,NTamd64
+
+[SourceDisksFiles]
+BMC12x4.sys     = 1
+BMC12x4_64.sys     = 1
+WdfCoInstaller01009.dll = 1
+
+[SourceDisksNames]
+1=%DISK_NAME%,
+
+[DestinationDirs]
+BmcDrv.Dev_CopyFiles = 12
+BmcDrv.Dev.NTamd64_CopyFiles = 12
+CoInstaller_CopyFiles = 11
+
+; For Win2K
+[Friendess]
+%BMC1203.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1203
+%BMC1204.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1204
+%BMC1204V2.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1304
+%BMC1204V3.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1204&SUBSYS_49710042
+%BMC1205.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1205
+%BMC1214.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1214
+%BMC1304.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1304
+%BMC1305.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1305
+%BMC1603.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1603
+%BMC1604.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1604
+%BMC1604V2.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1604&SUBSYS_4DD30042
+%BMC1605.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1605
+%BMC1605V2.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1605&SUBSYS_6DD30042
+%BMC2180.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2180
+%BMC1180.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1180
+%BMC1700.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1700
+%BMC1703.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1703
+%BMC1704.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1704
+%BMC1705.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1705
+%BMC1800.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1800
+%BMC1803.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1803
+%BMC1804.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1804
+%BMC1814.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1814
+%BMC1805.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1805
+%BMC1900.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1900
+%BMC1903.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1903
+%BMC1904.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1904
+%BMC1914.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1914
+%BMC1905.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1905
+%BMC2100.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2100
+%BMC2103.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2103
+%BMC2104.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2104
+%BMC2114.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2114
+%BMC2105.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2105
+%BMCC614.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_C614
+
+%BMC2601.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2601
+%BMC2602.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2602
+%BMC2603.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2603
+%BMC2604.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2604
+%BMC2605.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2605
+%BMC2606.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2606
+%BMC2607.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2607
+%BMC2608.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2608
+%BMC2609.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2609
+%BMCBC10.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC10
+%BMCBC11.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC11
+%BMCBC12.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC12
+%BMCBC13.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC13
+%BMCBC14.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC14
+%BMCBC15.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC15
+%BMCBC16.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC16
+%BMCBC17.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC17
+%BMCBC18.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC18
+%BMCBC19.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC19
+%BMCBC20.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC20
+%BMCBC21.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC21
+%BMCBC22.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC22
+%BMCBC23.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC23
+%BMCBC24.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC24
+%BMCBC25.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC25
+
+%GeneralDeviceDec%=BmcDrv.Dev, PCI\VEN_6125&CC_FFBC
+%GeneralDeviceDec%=BmcDrv.Dev, PCI\VEN_6125&CC_0000
+
+; For WinXP and later
+[Friendess.NT]
+%BMC1203.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1203
+%BMC1204.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1204
+%BMC1204V2.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1304
+%BMC1204V3.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1204&SUBSYS_49710042
+%BMC1205.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1205
+%BMC1214.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1214
+%BMC1304.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1304
+%BMC1305.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1305
+%BMC1603.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1603
+%BMC1604.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1604
+%BMC1604V2.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1604&SUBSYS_4DD30042
+%BMC1605.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1605
+%BMC1605V2.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1605&SUBSYS_6DD30042
+%BMC2180.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2180
+%BMC1180.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1180
+%BMC1700.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1700
+%BMC1703.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1703
+%BMC1704.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1704
+%BMC1705.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1705
+%BMC1800.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1800
+%BMC1803.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1803
+%BMC1804.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1804
+%BMC1814.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1814
+%BMC1805.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1805
+%BMC1900.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1900
+%BMC1903.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1903
+%BMC1904.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1904
+%BMC1914.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1914
+%BMC1905.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_1905
+%BMC2100.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2100
+%BMC2103.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2103
+%BMC2104.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2104
+%BMC2114.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2114
+%BMC2105.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2105
+%BMCC614.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_C614
+
+%BMC2601.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2601
+%BMC2602.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2602
+%BMC2603.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2603
+%BMC2604.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2604
+%BMC2605.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2605
+%BMC2606.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2606
+%BMC2607.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2607
+%BMC2608.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2608
+%BMC2609.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_2609
+%BMCBC10.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC10
+%BMCBC11.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC11
+%BMCBC12.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC12
+%BMCBC13.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC13
+%BMCBC14.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC14
+%BMCBC15.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC15
+%BMCBC16.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC16
+%BMCBC17.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC17
+%BMCBC18.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC18
+%BMCBC19.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC19
+%BMCBC20.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC20
+%BMCBC21.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC21
+%BMCBC22.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC22
+%BMCBC23.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC23
+%BMCBC24.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC24
+%BMCBC25.DeviceDesc%=BmcDrv.Dev, PCI\VEN_6125&DEV_BC25
+
+%GeneralDeviceDec%=BmcDrv.Dev, PCI\VEN_6125&CC_FFBC
+%GeneralDeviceDec%=BmcDrv.Dev, PCI\VEN_6125&CC_0000
+
+; For x64
+[Friendess.NTamd64]
+%BMC1203.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1203
+%BMC1204.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1204
+%BMC1204V2.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1304
+%BMC1204V3.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1204&SUBSYS_49710042
+%BMC1205.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1205
+%BMC1214.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1214
+%BMC1304.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1304
+%BMC1305.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1305
+%BMC1603.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1603
+%BMC1604.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1604
+%BMC1604V2.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1604&SUBSYS_4DD30042
+%BMC1605.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1605
+%BMC1605V2.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1605&SUBSYS_6DD30042
+%BMC2180.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2180
+%BMC1180.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1180
+%BMC1700.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1700
+%BMC1703.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1703
+%BMC1704.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1704
+%BMC1705.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1705
+%BMC1800.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1800
+%BMC1803.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1803
+%BMC1804.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1804
+%BMC1814.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1814
+%BMC1805.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1805
+%BMC1900.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1900
+%BMC1903.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1903
+%BMC1904.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1904
+%BMC1914.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1914
+%BMC1905.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_1905
+%BMC2100.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2100
+%BMC2103.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2103
+%BMC2104.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2104
+%BMC2114.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2114
+%BMC2105.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2105
+%BMCC614.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_C614
+
+%BMC2601.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2601
+%BMC2602.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2602
+%BMC2603.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2603
+%BMC2604.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2604
+%BMC2605.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2605
+%BMC2606.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2606
+%BMC2607.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2607
+%BMC2608.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2608
+%BMC2609.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_2609
+%BMCBC10.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC10
+%BMCBC11.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC11
+%BMCBC12.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC12
+%BMCBC13.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC13
+%BMCBC14.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC14
+%BMCBC15.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC15
+%BMCBC16.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC16
+%BMCBC17.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC17
+%BMCBC18.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC18
+%BMCBC19.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC19
+%BMCBC20.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC20
+%BMCBC21.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC21
+%BMCBC22.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC22
+%BMCBC23.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC23
+%BMCBC24.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC24
+%BMCBC25.DeviceDesc%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&DEV_BC25
+
+%GeneralDeviceDec%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&CC_FFBC
+%GeneralDeviceDec%=BmcDrv.Dev.NTamd64, PCI\VEN_6125&CC_0000
+
+[BmcDrv.Dev.NT]
+CopyFiles      = BmcDrv.Dev_CopyFiles
+
+[BmcDrv.Dev.NTamd64]
+CopyFiles      = BmcDrv.Dev.NTamd64_CopyFiles
+
+[BmcDrv.Dev_CopyFiles]
+BMC12x4.sys
+
+[BmcDrv.Dev.NTamd64_CopyFiles]
+BMC12x4_64.sys
+
+[BmcDrv.Dev.NT.Services]
+AddService     = BMC12x4Drv,0x00000002,BmcDrv.Dev.Service
+
+[BmcDrv.Dev.Service]
+DisplayName    = %BMC12x4.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\BMC12x4.sys
+
+[BmcDrv.Dev.NTamd64.Services]
+AddService     = BMC12x4Drv,0x00000002,BmcDrv.Dev.NTamd64.Service
+
+[BmcDrv.Dev.NTamd64.Service]
+DisplayName    = %BMC12x4.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\BMC12x4_64.sys
+
+;-------------------------------------------------------------------------
+; WDF Coinstaller installation
+;-------------------------------------------------------------------------
+[BmcDrv.Dev.NT.CoInstallers]
+AddReg         = CoInstaller_AddReg
+CopyFiles      = CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[BmcDrv.Dev.NT.Wdf]
+KmdfService    = BMC12x4Drv, BmcDrv.Dev.NT_wdfsect
+
+[BmcDrv.Dev.NT_wdfsect]
+KmdfLibraryVersion = 1.9
+
+;------------------------------------------------------------------------------
+;  String Definitions
+;------------------------------------------------------------------------------
+
+[Strings]
+Friendess="Friendess, Inc. (Shanghai, CN)"
+DeviceClassName="BMX Motion Controller"
+GeneralDeviceDec = "BMC General Motion Card"
+BMC1203.DeviceDesc="BMC1203 Motion Card"
+BMC1204.DeviceDesc="BMC1204 Motion Card"
+BMC1204V2.DeviceDesc="BMC1204 Motion Card V2"
+BMC1204V3.DeviceDesc="BMC1204 Motion Card V3"
+BMC1205.DeviceDesc="BMC1205 Motion Card"
+BMC1214.DeviceDesc="BMC1214 Motion Card"
+BMC1304.DeviceDesc="BMC1304 Motion Card"
+BMC1305.DeviceDesc="BMC1305 Motion Card"
+BMC1603.DeviceDesc="BMC1603 Motion Card"
+BMC1604.DeviceDesc="BMC1604 Motion Card"
+BMC1604V2.DeviceDesc="BMC1604 Motion Card V2"
+BMC1605.DeviceDesc="BMC1605 Motion Card"
+BMC1605V2.DeviceDesc="BMC1605 Motion Card V2"
+BMC2180.DeviceDesc="BMC2180 Motion Card"
+BMC1180.DeviceDesc="BMC1180 Motion Card"
+BMC1700.DeviceDesc="BMC1700 Communication Card"
+BMC1703.DeviceDesc="BMC1703 Motion Card"
+BMC1704.DeviceDesc="BMC1704 Motion Card"
+BMC1705.DeviceDesc="BMC1705 Motion Card"
+BMC1800.DeviceDesc="BMC1800 Communication Card"
+BMC1803.DeviceDesc="BMC1803 Motion Card"
+BMC1804.DeviceDesc="BMC1804 Motion Card"
+BMC1814.DeviceDesc="BMC1814 Motion Card"
+BMC1805.DeviceDesc="BMC1805 Motion Card"
+BMC1900.DeviceDesc="BMC1900 Communication Card"
+BMC1903.DeviceDesc="BMC1903 Motion Card"
+BMC1904.DeviceDesc="BMC1904 Motion Card"
+BMC1914.DeviceDesc="BMC1914 Motion Card"
+BMC1905.DeviceDesc="BMC1905 Motion Card"
+BMC2614.DeviceDesc="BMC2614 Motion Card"
+BMC2100.DeviceDesc="BMC2100 Communication Card"
+BMC2103.DeviceDesc="BMC2103 Motion Card"
+BMC2104.DeviceDesc="BMC2104 Motion Card"
+BMC2114.DeviceDesc="BMC2114 Motion Card"
+BMC2105.DeviceDesc="BMC2105 Motion Card"
+BMCC614.DeviceDesc="BMCC614 Motion Card"
+
+BMC2601.DeviceDesc="BC2201 Control Card"
+BMC2602.DeviceDesc="BC2202 Control Card"
+BMC2603.DeviceDesc="BC2203 Control Card"
+BMC2604.DeviceDesc="BC2204 Control Card"
+BMC2605.DeviceDesc="BC2205 Control Card"
+BMC2606.DeviceDesc="BC06 Control Card"
+BMC2607.DeviceDesc="BC07 Control Card"
+BMC2608.DeviceDesc="BC08 Control Card"
+BMC2609.DeviceDesc="BC09 Control Card"
+BMCBC10.DeviceDesc="BC10 Control Card"
+BMCBC11.DeviceDesc="BC11 Control Card"
+BMCBC12.DeviceDesc="BC12 Control Card"
+BMCBC13.DeviceDesc="BC13 Control Card"
+BMCBC14.DeviceDesc="BC2214 Control Card"
+BMCBC15.DeviceDesc="BC15 Control Card"
+BMCBC16.DeviceDesc="BC16 Control Card"
+BMCBC17.DeviceDesc="BC17 Control Card"
+BMCBC18.DeviceDesc="BC18 Control Card"
+BMCBC19.DeviceDesc="BC19 Control Card"
+BMCBC20.DeviceDesc="BC20 Control Card"
+BMCBC21.DeviceDesc="BC21 Control Card"
+BMCBC22.DeviceDesc="BC22 Control Card"
+BMCBC23.DeviceDesc="BC23 Control Card"
+BMCBC24.DeviceDesc="BC24 Control Card"
+BMCBC25.DeviceDesc="BC25 Control Card"
+
+BMC12x4.SvcDesc="BMX Motion Card Service"
+DISK_NAME      = "BMX Motion Card Install Disk"
+
+[Strings.0804]
+Friendess="上海柏楚电子科技股份有限公司"
+DeviceClassName="BMX-柏楚电子运动控制卡"
+GeneralDeviceDec = "BMC通用控制卡"
+BMC1203.DeviceDesc="BMC1203运动控制卡"
+BMC1204.DeviceDesc="BMC1204运动控制卡"
+BMC1204V2.DeviceDesc="BMC1204运动控制卡V2"
+BMC1204V3.DeviceDesc="BMC1204运动控制卡V3"
+BMC1205.DeviceDesc="BMC1205运动控制卡"
+BMC1214.DeviceDesc="BMC1214运动控制卡"
+BMC1304.DeviceDesc="BMC1304运动控制卡"
+BMC1305.DeviceDesc="BMC1305运动控制卡"
+BMC1603.DeviceDesc="BMC1603运动控制卡"
+BMC1604.DeviceDesc="BMC1604运动控制卡"
+BMC1604V2.DeviceDesc="BMC1604运动控制卡V2"
+BMC1605.DeviceDesc="BMC1605运动控制卡"
+BMC1605V2.DeviceDesc="BMC1605运动控制卡V2"
+BMC2180.DeviceDesc="BMC2180运动控制卡"
+BMC1180.DeviceDesc="BMC1180运动控制卡"
+BMC1700.DeviceDesc="BMC1700通道控制卡"
+BMC1703.DeviceDesc="BMC1703运动控制卡"
+BMC1704.DeviceDesc="BMC1704运动控制卡"
+BMC1705.DeviceDesc="BMC1705运动控制卡"
+BMC1800.DeviceDesc="BMC1800通道控制卡"
+BMC1803.DeviceDesc="BMC1803运动控制卡"
+BMC1804.DeviceDesc="BMC1804运动控制卡"
+BMC1814.DeviceDesc="BMC1814运动控制卡"
+BMC1805.DeviceDesc="BMC1805运动控制卡"
+BMC1900.DeviceDesc="BMC1900通道控制卡"
+BMC1903.DeviceDesc="BMC1903运动控制卡"
+BMC1904.DeviceDesc="BMC1904运动控制卡"
+BMC1914.DeviceDesc="BMC1914运动控制卡"
+BMC1905.DeviceDesc="BMC1905运动控制卡"
+BMC2614.DeviceDesc="BMC2614运动控制卡"
+BMC2100.DeviceDesc="BMC_2100通道控制卡"
+BMC2103.DeviceDesc="BMC_2103运动控制卡"
+BMC2104.DeviceDesc="BMC_2104运动控制卡"
+BMC2114.DeviceDesc="BMC_2114运动控制卡"
+BMC2105.DeviceDesc="BMC_2105运动控制卡"
+BMCC614.DeviceDesc="BMC_C614运动控制卡"
+
+BMC2601.DeviceDesc="BC_2201控制卡"
+BMC2602.DeviceDesc="BC_2202控制卡"
+BMC2603.DeviceDesc="BC_2203控制卡"
+BMC2604.DeviceDesc="BC_2204控制卡"
+BMC2605.DeviceDesc="BC_2205控制卡"
+BMC2606.DeviceDesc="BC06控制卡"
+BMC2607.DeviceDesc="BC07控制卡"
+BMC2608.DeviceDesc="BC08控制卡"
+BMC2609.DeviceDesc="BC09控制卡"
+BMCBC10.DeviceDesc="BC10控制卡"
+BMCBC11.DeviceDesc="BC11控制卡"
+BMCBC12.DeviceDesc="BC12控制卡"
+BMCBC13.DeviceDesc="BC13控制卡"
+BMCBC14.DeviceDesc="BC_2214控制卡"
+BMCBC15.DeviceDesc="BC15控制卡"
+BMCBC16.DeviceDesc="BC16控制卡"
+BMCBC17.DeviceDesc="BC17控制卡"
+BMCBC18.DeviceDesc="BC18控制卡"
+BMCBC19.DeviceDesc="BC19控制卡"
+BMCBC20.DeviceDesc="BC20控制卡"
+BMCBC21.DeviceDesc="BC21控制卡"
+BMCBC22.DeviceDesc="BC22控制卡"
+BMCBC23.DeviceDesc="BC23控制卡"
+BMCBC24.DeviceDesc="BC24控制卡"
+BMCBC25.DeviceDesc="BC25控制卡"
+
+BMC12x4.SvcDesc="BMX运动控制卡服务程序"
+DISK_NAME      = "BMX运动控制卡安装磁盘"

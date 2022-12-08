@@ -1,0 +1,23 @@
+messageNum := 999;
+DINTEXTSet(dintext0,messageNum);
+WaitIsFinished();
+read_step:=DINTEXTRead(dintext0);
+WHILE(read_step!=1020)DO
+read_step:=DINTEXTRead(dintext0);
+WaitTime(t);
+END_WHILE
+WaitTime(t);
+commandNum := 1;
+DINTEXTSet(dintext4,commandNum);
+WaitIsFinished();
+messageNum := 0;
+DINTEXTSet(dintext0,messageNum);
+WaitIsFinished();
+WaitTime(uint0);
+read_step:=DINTEXTRead(dintext0);
+WaitIsFinished();
+WHILE(read_step!=1080)DO
+read_step:=DINTEXTRead(dintext0);
+WaitIsFinished();
+WaitTime(t);
+END_WHILE

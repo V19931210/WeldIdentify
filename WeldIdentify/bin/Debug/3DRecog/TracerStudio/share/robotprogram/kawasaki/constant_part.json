@@ -1,0 +1,5 @@
+{
+    ".TRANS": "p_home 0 0 0 0 0 0\n",
+    ".REALS": "max_length = 200\ntimeout = 6\nsend_ret = 0\nrcv_ret = 0\nre_count = 3",
+    "process": "BASE world_c3d\nTOOL tool_c3d\nLMOVE p_home\n"
+}

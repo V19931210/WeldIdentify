@@ -1,1 +1,14 @@
 .vs
+WeldIdentify/bin/Debug/Robot/CypWeld/installer
+WeldIdentify/bin/Debug/3DRegis/preciseLocate/x64/Debug/preciseLocate.pdb
+*.log
+*.exp
+*.tlog
+*.cbt
+*.stash
+*.db
+*.ipch
+*.recipe
+*.idx
+*.suo
+*.pdb

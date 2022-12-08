@@ -1,0 +1,135 @@
+QLabel {
+    background-color: transparent;
+    color: #F2F2F2;
+    font-size: 16px;
+}
+QLabel:disabled {
+    color: #666666;
+}
+QLabel[about]{
+    font-size: 22px;
+}
+
+QLabel[appName] {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+QLabel[appversion] {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QLabel[ipaddr][portnumber]{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+QLabel[servertitle]{
+    background-color: #2299B1;
+    font-size: 24px;
+    color: #F2F2F2;
+}
+
+QLabel[statusinfo]{
+   font-size: 16px; 
+}
+QLabel[statusinfo ="failed"]{
+   background-color: #970808;
+}
+QLabel[statusinfo ="succeeded"]{
+   background-color: #1EBE1E;
+}
+QLabel[statusinfo ="test"]{
+   background-color: #1E50BE;
+}
+
+QLabel[cameraimage]{
+   background-color: #000000;
+}
+
+QLabel[welderCaption]{
+   padding-left:5px;
+   font-size: 28px;
+  /* font-weight: bold;*/
+}
+QLabel[titelback] {
+    background-color:#171719;
+}
+
+QLabel[CameraName]{
+    background-color: rgb(25,125,180);
+    font-size: 20px;
+    color: #FFFFFF;
+}
+QLabel[Weldingfeature]{
+    background-color:rgb(70,70,85);
+}
+
+QLabel[toptitle=true]{
+    background-color:rgb(30,128,165);
+    color:#F2F2F2;
+}
+QLabel[maxtoptitle=true]{
+   font-size: 20px;
+   background-color:transparent;
+}
+
+QLabel[robotonlie]{
+    background-color:rgb(30,128,165);
+    color:#F2F2F2;
+}
+
+QLabel[robotstatus = false]{
+    background-color:rgb(30,128,165);
+    color:#F2F2F2;
+}
+
+QLabel[robotstatus = true]{
+    background-color:rgb(37,180,116);
+    color:#F2F2F2;
+}
+
+QLabel[Detailed = true]{
+   image:url(:/Resource/Images/Right_Schematic.png);
+}
+
+
+/******************************钢构参数配图************************************************/
+QLabel[ShowParamPic="HSteel_AbsoluteFilterThreshold"]{
+    image:url(:/Resource/Images/Gallery/HSteel_AbsoluteFilterThreshold.png);
+}
+
+QLabel[ShowParamPic="HSteel_AngleBetweenTwoSides"]{
+    image:url(:/Resource/Images/Gallery/HSteel_AngleBetweenTwoSides.png);
+}
+
+
+QLabel[ShowParamPic="HSteel_AreaFilterFactor"]{
+    image:url(:/Resource/Images/Gallery/HSteel_AreaFilterFactor.png);
+}
+
+
+QLabel[ShowParamPic="HSteel_CurveSamplingRate"]{
+    image:url(:/Resource/Images/Gallery/HSteel_CurveSamplingRate.png);
+}
+
+QLabel[ShowParamPic="HSteel_GapCalculationThreshold"]{
+    image:url(:/Resource/Images/Gallery/HSteel_GapCalculationThreshold.png);
+}
+
+QLabel[ShowParamPic="USteelWeld"]{
+    image:url(:/Resource/Images/Gallery/usteelparam.png);
+}
+
+
+
+QLabel[torch=true]{
+    image:url(:/Resource/Images/Torchorientation.png);
+}
+
+QLabel[unitId=true]{
+    background-color:rgb(0, 255, 0);
+    border: 1px solid #4d5158;
+    color: #000000;
+}

@@ -1,0 +1,100 @@
+QTabBar {
+    qproperty-drawBase: 0; /*must do not del ete this*/
+}
+QTabBar::tab {
+    color: #F2F2F2;
+    border: 1px solid #4d5158;
+    width: 150px;
+    height: 45px;
+    border-top: none;
+    border-bottom: none;
+    alignment: center;
+    font-size: 22px;
+}
+
+QTabBar::tab:first {
+    border-left: 1px solid #4d5158;
+    border-right: 1px solid #4d5158;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+QTabBar::tab:last {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+
+
+QTabBar::tab:!first {
+    border-left: 0px;
+    border-right: 1px solid #4d5158;
+}
+
+QTabBar[isSwitchTabBar=true]
+{
+	background-color:transparent;
+}
+QTabBar[isSwitchTabBar=true]:tab
+{
+	background-color:#2c2e33;
+}
+/*以下为通用功能页面切换Tab效果*/
+QTabBar::tab:hover {
+    color: #F2F2F2;
+    background-color: #0D0D0F;
+}
+
+QTabBar::tab:selected {
+    color: #F2F2F2;
+    background-color:#007ACC;
+    font-size: 22px;
+    font-weight: bold;
+}
+QTabBar QToolButton::right-arrow {
+    background-color: #36373e;
+}
+
+QTabBar QToolButton::left-arrow {
+    background-color: #36373e;
+}
+QTabBar QToolButton::right-arrow:enabled {
+    image: url(arpaTheme.image.toolbutton_right_arrow_normal);
+}
+
+QTabBar QToolButton::left-arrow:enabled {
+    image: url(arpaTheme.image.toolbutton_left_arrow_normal);
+}
+
+QTabBar QToolButton::right-arrow:disabled {
+    image: url(arpaTheme.image.toolbutton_right_arrow_disabled);
+}
+
+QTabBar QToolButton::left-arrow:disabled {
+    image: url(arpaTheme.image.toolbutton_left_arrow_disabled);
+}
+
+QTabBar [modeindex = "EncryptunAvailable"]{
+   background-color: #077aa6;
+}
+QTabBar::tab[cameraTab] {
+    color: #F2F2F2;
+    border: 1px solid #4d5158;
+    width: 200px;
+    border-top: none;
+    border-bottom: none;
+    alignment: center;
+    font-size: 18px;
+}
+
+QTabBar::tab[caneraname] {
+    color: #F2F2F2;
+    border: 1px solid #4d5158;
+    width: 200px;
+    height:32px;
+    border-top: none;
+    border-bottom: none;
+    alignment: center;
+    font-size: 16px;
+}

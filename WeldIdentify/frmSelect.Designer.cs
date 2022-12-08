@@ -72,8 +72,9 @@ namespace WeldIdentify
             this.cbb2D.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb2D.FormattingEnabled = true;
             this.cbb2D.Items.AddRange(new object[] {
-            "Camera2DTest",
-            "BCVWeldTrack"});
+            "None",
+            "BCVWeldTrack",
+            "Camera2DTest"});
             this.cbb2D.Location = new System.Drawing.Point(185, 36);
             this.cbb2D.Name = "cbb2D";
             this.cbb2D.Size = new System.Drawing.Size(121, 20);
@@ -85,8 +86,9 @@ namespace WeldIdentify
             this.cbb3DRegis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb3DRegis.FormattingEnabled = true;
             this.cbb3DRegis.Items.AddRange(new object[] {
-            "CareraRegisTest",
-            "3DPreciseLocate"});
+            "None",
+            "PreciseLocate",
+            "CareraRegisTest"});
             this.cbb3DRegis.Location = new System.Drawing.Point(185, 75);
             this.cbb3DRegis.Name = "cbb3DRegis";
             this.cbb3DRegis.Size = new System.Drawing.Size(121, 20);
@@ -98,8 +100,10 @@ namespace WeldIdentify
             this.cbbRobot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbRobot.FormattingEnabled = true;
             this.cbbRobot.Items.AddRange(new object[] {
-            "RobotControlTest",
-            "CypWeld"});
+            "None",
+            "CypWeld",
+            "CypWeldDemo",
+            "RobotControlTest"});
             this.cbbRobot.Location = new System.Drawing.Point(185, 146);
             this.cbbRobot.Name = "cbbRobot";
             this.cbbRobot.Size = new System.Drawing.Size(121, 20);
@@ -121,8 +125,9 @@ namespace WeldIdentify
             this.cbb3DRecog.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb3DRecog.FormattingEnabled = true;
             this.cbb3DRecog.Items.AddRange(new object[] {
-            "CareraRecogTest",
-            "TracerStudio"});
+            "None",
+            "TracerStudio",
+            "CareraRecogTest"});
             this.cbb3DRecog.Location = new System.Drawing.Point(185, 110);
             this.cbb3DRecog.Name = "cbb3DRecog";
             this.cbb3DRecog.Size = new System.Drawing.Size(121, 20);

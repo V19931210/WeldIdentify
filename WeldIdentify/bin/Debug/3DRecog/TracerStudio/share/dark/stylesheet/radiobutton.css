@@ -1,0 +1,81 @@
+/*通用属性*/
+QRadioButton {
+    spacing: 2px;
+    outline: none;
+    color: #cccccc;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+QRadioButton:hover,
+QRadioButton:focus,
+QRadioButton:pressed {
+    color: #e5e5e5;
+}
+
+QRadioButton:disabled {
+    color: #4c5055;
+}
+
+QRadioButton::indicator {
+    width: 32px;
+    height: 32px;
+}
+
+QRadioButton::indicator:hover {
+    width: 32px;
+    height: 32px;
+}
+
+QRadioButton::indicator:disabled {
+    width: 32px;
+    height: 32px;
+}
+
+QRadioButton::indicator:focus {
+    width: 32px;
+    height: 32px;
+}
+
+QRadioButton::indicator:unchecked {
+    image: url(arpaTheme.image.radiobutton_unselected);
+}
+
+
+QRadioButton::indicator:unchecked:hover,
+QRadioButton::indicator:unchecked:focus,
+QRadioButton::indicator:unchecked:pressed {
+    border: none;
+    outline: none;
+}
+
+QRadioButton::indicator:checked {
+    border: none;
+    outline: none;
+    image: url(arpaTheme.image.radiobutton_selected);
+}
+
+QRadioButton::indicator:checked:hover,
+QRadioButton::indicator:checked:focus,
+QRadioButton::indicator:checked:pressed {
+    border: none;
+    outline: none;
+}
+
+QRadioButton::indicator:checked:disabled {
+    background-color: transparent;
+    outline: none;
+    image: url(arpaTheme.image.radiobutton_selected_disabled);
+}
+
+QRadioButton::indicator:unchecked:hover {
+    background-color: transparent;
+    outline: none;
+    image: url(arpaTheme.image.radiobutton_unselected_hover);
+}
+
+QRadioButton::indicator:unchecked:disabled {
+    background-color: transparent;
+    outline: none;
+    image: url(arpaTheme.image.radiobutton_unselected_disabled);
+}

@@ -33,6 +33,7 @@ namespace WeldIdentify
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -41,6 +42,17 @@ namespace WeldIdentify
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnShowAll = new System.Windows.Forms.Button();
+            this.btnShowRobot = new System.Windows.Forms.Button();
+            this.btnShow2D = new System.Windows.Forms.Button();
+            this.btnShow3DRecog = new System.Windows.Forms.Button();
+            this.btnShow3DRegis = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.相机设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.重连2D相机ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,26 +60,20 @@ namespace WeldIdentify
             this.d相机参数设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.d相机参数设置ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Log = new System.Windows.Forms.TextBox();
-            this.panelLeft = new System.Windows.Forms.Panel();
+            this.timerUpdateFrm = new System.Windows.Forms.Timer(this.components);
+            this.panelAll = new System.Windows.Forms.TableLayoutPanel();
             this.panel3DRegis = new System.Windows.Forms.Panel();
+            this.panel3DRecog = new System.Windows.Forms.Panel();
             this.panel2D = new System.Windows.Forms.Panel();
             this.panelRobot = new System.Windows.Forms.Panel();
-            this.panelMid = new System.Windows.Forms.Panel();
-            this.panel3DRecog = new System.Windows.Forms.Panel();
-            this.timerUpdateFrm = new System.Windows.Forms.Timer(this.components);
-            this.button9 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.panelOne = new System.Windows.Forms.Panel();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panelControl.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.panelLeft.SuspendLayout();
-            this.panelMid.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panelAll.SuspendLayout();
             this.SuspendLayout();
             // 
             // button7
@@ -98,12 +104,23 @@ namespace WeldIdentify
             this.groupBox4.Controls.Add(this.button8);
             this.groupBox4.Controls.Add(this.button7);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(0, 310);
+            this.groupBox4.Location = new System.Drawing.Point(0, 370);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(224, 100);
+            this.groupBox4.Size = new System.Drawing.Size(224, 71);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "2D相机焊缝跟踪";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(152, 20);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(67, 42);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "结束跟踪";
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -181,7 +198,7 @@ namespace WeldIdentify
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(0, 28);
+            this.groupBox3.Location = new System.Drawing.Point(0, 103);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(224, 119);
             this.groupBox3.TabIndex = 1;
@@ -190,16 +207,151 @@ namespace WeldIdentify
             // 
             // panelControl
             // 
+            this.panelControl.Controls.Add(this.groupBox2);
             this.panelControl.Controls.Add(this.groupBox1);
             this.panelControl.Controls.Add(this.menuStrip1);
             this.panelControl.Controls.Add(this.Log);
             this.panelControl.Controls.Add(this.groupBox3);
             this.panelControl.Controls.Add(this.groupBox4);
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl.Location = new System.Drawing.Point(1610, 0);
+            this.panelControl.Location = new System.Drawing.Point(1600, 0);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(224, 900);
             this.panelControl.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnShowAll);
+            this.groupBox2.Controls.Add(this.btnShowRobot);
+            this.groupBox2.Controls.Add(this.btnShow2D);
+            this.groupBox2.Controls.Add(this.btnShow3DRecog);
+            this.groupBox2.Controls.Add(this.btnShow3DRegis);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Location = new System.Drawing.Point(0, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(224, 70);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "显示模式";
+            // 
+            // btnShowAll
+            // 
+            this.btnShowAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnShowAll.ForeColor = System.Drawing.Color.White;
+            this.btnShowAll.Location = new System.Drawing.Point(182, 20);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(40, 40);
+            this.btnShowAll.TabIndex = 13;
+            this.btnShowAll.Text = "全局显示";
+            this.btnShowAll.UseVisualStyleBackColor = false;
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
+            // 
+            // btnShowRobot
+            // 
+            this.btnShowRobot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnShowRobot.ForeColor = System.Drawing.Color.White;
+            this.btnShowRobot.Location = new System.Drawing.Point(137, 20);
+            this.btnShowRobot.Name = "btnShowRobot";
+            this.btnShowRobot.Size = new System.Drawing.Size(40, 40);
+            this.btnShowRobot.TabIndex = 12;
+            this.btnShowRobot.Text = "数字孪生";
+            this.btnShowRobot.UseVisualStyleBackColor = false;
+            this.btnShowRobot.Click += new System.EventHandler(this.btnShowRobot_Click);
+            // 
+            // btnShow2D
+            // 
+            this.btnShow2D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnShow2D.ForeColor = System.Drawing.Color.White;
+            this.btnShow2D.Location = new System.Drawing.Point(92, 20);
+            this.btnShow2D.Name = "btnShow2D";
+            this.btnShow2D.Size = new System.Drawing.Size(40, 40);
+            this.btnShow2D.TabIndex = 11;
+            this.btnShow2D.Text = "2D 跟踪";
+            this.btnShow2D.UseVisualStyleBackColor = false;
+            this.btnShow2D.Click += new System.EventHandler(this.btnShow2D_Click);
+            // 
+            // btnShow3DRecog
+            // 
+            this.btnShow3DRecog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnShow3DRecog.ForeColor = System.Drawing.Color.White;
+            this.btnShow3DRecog.Location = new System.Drawing.Point(47, 20);
+            this.btnShow3DRecog.Name = "btnShow3DRecog";
+            this.btnShow3DRecog.Size = new System.Drawing.Size(40, 40);
+            this.btnShow3DRecog.TabIndex = 10;
+            this.btnShow3DRecog.Text = "3D 识别";
+            this.btnShow3DRecog.UseVisualStyleBackColor = false;
+            this.btnShow3DRecog.Click += new System.EventHandler(this.btnShow3DRecog_Click);
+            // 
+            // btnShow3DRegis
+            // 
+            this.btnShow3DRegis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnShow3DRegis.ForeColor = System.Drawing.Color.White;
+            this.btnShow3DRegis.Location = new System.Drawing.Point(2, 20);
+            this.btnShow3DRegis.Name = "btnShow3DRegis";
+            this.btnShow3DRegis.Size = new System.Drawing.Size(40, 40);
+            this.btnShow3DRegis.TabIndex = 9;
+            this.btnShow3DRegis.Text = "3D 配准";
+            this.btnShow3DRegis.UseVisualStyleBackColor = false;
+            this.btnShow3DRegis.Click += new System.EventHandler(this.btnShow3DRegis_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button10);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.button13);
+            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(0, 228);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 134);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "3D相机焊缝识别";
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(152, 20);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(67, 42);
+            this.button10.TabIndex = 8;
+            this.button10.Text = "开始焊接";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "焊缝模板：";
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(79, 20);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(67, 42);
+            this.button13.TabIndex = 5;
+            this.button13.Text = "点云识别所有焊缝";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.ForeColor = System.Drawing.Color.White;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "V型焊缝",
+            "平板焊缝"});
+            this.comboBox3.Location = new System.Drawing.Point(6, 42);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(67, 20);
+            this.comboBox3.TabIndex = 3;
             // 
             // menuStrip1
             // 
@@ -256,154 +408,93 @@ namespace WeldIdentify
             this.Log.Size = new System.Drawing.Size(224, 450);
             this.Log.TabIndex = 6;
             // 
-            // panelLeft
+            // panelAll
             // 
-            this.panelLeft.Controls.Add(this.panel3DRegis);
-            this.panelLeft.Controls.Add(this.panel2D);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(800, 900);
-            this.panelLeft.TabIndex = 7;
+            this.panelAll.ColumnCount = 2;
+            this.panelAll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelAll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelAll.Controls.Add(this.panel3DRegis, 0, 0);
+            this.panelAll.Controls.Add(this.panel3DRecog, 2, 0);
+            this.panelAll.Controls.Add(this.panel2D, 0, 1);
+            this.panelAll.Controls.Add(this.panelRobot, 1, 1);
+            this.panelAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAll.Location = new System.Drawing.Point(0, 0);
+            this.panelAll.Name = "panelAll";
+            this.panelAll.RowCount = 2;
+            this.panelAll.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelAll.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelAll.Size = new System.Drawing.Size(1600, 900);
+            this.panelAll.TabIndex = 0;
             // 
             // panel3DRegis
             // 
+            this.panel3DRegis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3DRegis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3DRegis.Location = new System.Drawing.Point(0, 0);
+            this.panel3DRegis.Location = new System.Drawing.Point(3, 3);
             this.panel3DRegis.Name = "panel3DRegis";
-            this.panel3DRegis.Size = new System.Drawing.Size(800, 450);
-            this.panel3DRegis.TabIndex = 2;
-            // 
-            // panel2D
-            // 
-            this.panel2D.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2D.Location = new System.Drawing.Point(0, 450);
-            this.panel2D.Name = "panel2D";
-            this.panel2D.Size = new System.Drawing.Size(800, 450);
-            this.panel2D.TabIndex = 1;
-            // 
-            // panelRobot
-            // 
-            this.panelRobot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelRobot.Location = new System.Drawing.Point(0, 450);
-            this.panelRobot.Name = "panelRobot";
-            this.panelRobot.Size = new System.Drawing.Size(810, 450);
-            this.panelRobot.TabIndex = 0;
-            // 
-            // panelMid
-            // 
-            this.panelMid.Controls.Add(this.panel3DRecog);
-            this.panelMid.Controls.Add(this.panelRobot);
-            this.panelMid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMid.Location = new System.Drawing.Point(800, 0);
-            this.panelMid.Name = "panelMid";
-            this.panelMid.Size = new System.Drawing.Size(810, 900);
-            this.panelMid.TabIndex = 8;
+            this.panel3DRegis.Size = new System.Drawing.Size(794, 444);
+            this.panel3DRegis.TabIndex = 0;
             // 
             // panel3DRecog
             // 
+            this.panel3DRecog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3DRecog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3DRecog.Location = new System.Drawing.Point(0, 0);
+            this.panel3DRecog.Location = new System.Drawing.Point(803, 3);
             this.panel3DRecog.Name = "panel3DRecog";
-            this.panel3DRecog.Size = new System.Drawing.Size(810, 450);
+            this.panel3DRecog.Size = new System.Drawing.Size(794, 444);
             this.panel3DRecog.TabIndex = 1;
-            this.panel3DRecog.SizeChanged += new System.EventHandler(this.panel3DRecog_SizeChanged);
             // 
-            // button9
+            // panel2D
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(152, 20);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(67, 42);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "结束跟踪";
-            this.button9.UseVisualStyleBackColor = false;
+            this.panel2D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2D.Location = new System.Drawing.Point(3, 453);
+            this.panel2D.Name = "panel2D";
+            this.panel2D.Size = new System.Drawing.Size(794, 444);
+            this.panel2D.TabIndex = 2;
             // 
-            // groupBox1
+            // panelRobot
             // 
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button13);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(0, 155);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 134);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "3D相机焊缝识别";
+            this.panelRobot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelRobot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRobot.Location = new System.Drawing.Point(803, 453);
+            this.panelRobot.Name = "panelRobot";
+            this.panelRobot.Size = new System.Drawing.Size(794, 444);
+            this.panelRobot.TabIndex = 3;
             // 
-            // button10
+            // panelOne
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(152, 20);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(67, 42);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "开始焊接";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "焊缝模板：";
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(79, 20);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(67, 42);
-            this.button13.TabIndex = 5;
-            this.button13.Text = "点云识别所有焊缝";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "V型焊缝",
-            "平板焊缝"});
-            this.comboBox3.Location = new System.Drawing.Point(6, 42);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(67, 20);
-            this.comboBox3.TabIndex = 3;
+            this.panelOne.Location = new System.Drawing.Point(0, 0);
+            this.panelOne.Name = "panelOne";
+            this.panelOne.Size = new System.Drawing.Size(1600, 900);
+            this.panelOne.TabIndex = 1;
             // 
             // frmWeldIdentify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1834, 900);
-            this.Controls.Add(this.panelMid);
+            this.ClientSize = new System.Drawing.Size(1824, 900);
+            this.Controls.Add(this.panelAll);
             this.Controls.Add(this.panelControl);
-            this.Controls.Add(this.panelLeft);
+            this.Controls.Add(this.panelOne);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "frmWeldIdentify";
             this.Text = "WeldIdentifyForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmWeldIdentify_FormClosed);
             this.Load += new System.EventHandler(this.frmWeldIdentify_Load);
+            this.SizeChanged += new System.EventHandler(this.frmWeldIdentify_SizeChanged);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panelControl.ResumeLayout(false);
             this.panelControl.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.panelLeft.ResumeLayout(false);
-            this.panelMid.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panelAll.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -419,15 +510,8 @@ namespace WeldIdentify
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Panel panelMid;
         private System.Windows.Forms.Panel panelControl;
-        private System.Windows.Forms.Panel panel2D;
-        private System.Windows.Forms.Panel panel3DRegis;
-        private System.Windows.Forms.Panel panel3DRecog;
-        private System.Windows.Forms.Panel panelRobot;
         private System.Windows.Forms.Timer timerUpdateFrm;
-        private System.Windows.Forms.TextBox Log;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 相机设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 重连2D相机ToolStripMenuItem;
@@ -440,6 +524,19 @@ namespace WeldIdentify
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnShowAll;
+        private System.Windows.Forms.Button btnShowRobot;
+        private System.Windows.Forms.Button btnShow2D;
+        private System.Windows.Forms.Button btnShow3DRecog;
+        private System.Windows.Forms.Button btnShow3DRegis;
+        private System.Windows.Forms.TextBox Log;
+        private System.Windows.Forms.TableLayoutPanel panelAll;
+        private System.Windows.Forms.Panel panelOne;
+        private System.Windows.Forms.Panel panel3DRegis;
+        private System.Windows.Forms.Panel panel3DRecog;
+        private System.Windows.Forms.Panel panel2D;
+        private System.Windows.Forms.Panel panelRobot;
     }
 }
 

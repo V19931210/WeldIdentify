@@ -1,0 +1,84 @@
+QWidget{
+    background: transparent;
+    border:none; 
+}
+QWidget[mainframetop]{
+font-size:22px;
+    background-color:rgb(35,35,35);
+}
+QWidget[monitoringscreen]{
+    border:1px solid #576A4A;
+}
+QWidget[cameraShow]{
+    border:1px solid rgb(59,59,59);
+    margin:0;
+}
+
+QFrame[isTitleBar] QToolButton[isTitleBarLogoButton=true]:hover,
+QFrame[isTitleBar] ToolButton[isTitleBarLogoButton=true]:pressed {
+  border-style: flat;
+  background-color: transparent;
+  border: none;
+}
+
+
+QFrame[isTitleBar] QToolButton[isTitleBarCloseButton=true]:checked {
+    background-color: transparent;
+}
+
+
+QFrame[isTitleBar] QToolButton[isTitleBarCloseButton=true]:pressed {
+    background-color: #D23939;
+}
+QFrame[isTitleBar] QToolButton[isTitleBarMinButton=true]:hover,
+QFrame[isTitleBar] QToolButton[isTitleBarMaxButton=true]:hover,
+QFrame[isTitleBar] QToolButton[isTitleBarRestoreButton=true]:hover {
+   /* border: 1px solid #343434;*/
+    background-color: #454545;
+}
+
+
+/*标题栏的标题内容*/
+QFrame[isTitleBar] QLabel[isTitleBarTitle=true] {
+    font-size: 16px;
+    background-color: transparent;
+}
+
+/*1级分割线 级别越高,色越浅*/
+QFrame[isBackgroundSeparator],
+QFrame[isLevel1Separator]{
+    background-color: #000000;
+}
+QFrame{
+    background: transparent;
+    border:none; 
+}
+QFrame[contentframe]{
+    background: #424242;
+    border:none;
+}
+
+QFrame[isFramelessCentralWidget] {
+    border:1px solid rgb(12,12,12);
+    background-color:#2A2A2C;
+}
+
+
+QFrame[communicate] {
+   /* border:1px solid rgb(12,12,12);*/
+   background-color:#424242;
+}
+
+QFrame[frameLine] {
+    border:1px solid rgb(12,12,12);
+}
+
+QFrame[frameLineGrey] {
+    border:1px solid rgb(58,58,58);
+}
+QFrame[packageframeLine] {
+    border:1px solid rgb(106,106,106);
+}
+QFrame[topblackframe=true]{
+    background-color:#171719;
+}

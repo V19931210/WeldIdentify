@@ -1,0 +1,573 @@
+QPushButton[navigationstatus]
+{
+    border-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    image: url(:/Resource/Images/btn_kt_show_hover_2x.png);
+}
+
+QPushButton {
+    color: #F2F2F2;
+    background-color: #23252a;
+    border-width: 1px;
+    border-color: #5b5e66;
+    border-style: solid;
+    border-radius: 14px;
+    outline: none;
+    height: 28px;
+    min-width: 46px;
+    padding-left: 12px;
+    font-size: 16px;
+    padding-right: 12px;
+}
+
+
+QPushButton:disabled {
+    background-color: #23252a;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+QPushButton:focus {
+    background-color: #23252a;
+    border-color: #e2640c;
+    color: #999999;
+}
+
+QPushButton:hover {
+    background-color: #23252a;
+    border-color: #999999;
+    color: #fdfdfd;
+}
+
+QPushButton:pressed {
+    background-color: rgb(36,36,41);
+    border-color: #999999;
+    color: #F2F2F2;
+}
+
+QPushButton:checked {
+    background-color: rgb(36,36,41);
+    border-color: #e2640c;
+    color: #fdfdfd;
+}
+/***软件图标*/
+QPushButton[mainwindowslog] {
+     border:none;
+     background-color: transparent;
+     height:45px;
+     width:45px;
+     padding-left: 0px;
+     padding-right: 0px;
+     image: url(:/Resource/Images/smartweld.ico);
+}
+
+QPushButton[newfile] {
+     border:none;
+     background-color: transparent;
+     height:45px;
+     width:45px;
+     padding-left: 0px;
+     padding-right: 0px;
+     image: url(:/Resource/Images/new_normal.png);
+}
+
+QPushButton[newfile]:hover{
+     image: url(:/Resource/Images/new_hover.png);
+}
+
+
+QPushButton[newfile]:pressed{
+     image: url(:/Resource/Images/new_click.png);
+}
+
+QPushButton[openfile] {
+     border:none;
+     background-color: transparent;
+     height:45px;
+     width:45px;
+     padding-left: 0px;
+     padding-right: 0px;
+     image: url(:/Resource/Images/open_normal.png);
+}
+
+QPushButton[openfile]:hover{
+     image: url(:/Resource/Images/open_hover.png);
+}
+
+QPushButton[openfile]:pressed{
+     image: url(:/Resource/Images/open_click.png);
+}
+
+
+QPushButton[savefile] {
+     border:none;
+     background-color: transparent;
+     height:45px;
+     width:45px;
+     padding-left: 0px;
+     padding-right: 0px;
+     image: url(:/Resource/Images/save_normal.png);
+}
+
+QPushButton[savefile]:hover{
+     image: url(:/Resource/Images/save_hover.png);
+}
+
+QPushButton[savefile]:pressed{
+     image: url(:/Resource/Images/save_click.png);
+}
+
+QPushButton[saveasfile] {
+     border:none;
+     background-color: transparent;
+     height:45px;
+     width:45px;
+     padding-left: 0px;
+     padding-right: 0px;
+     image: url(:/Resource/Images/saveas_normal.png);
+}
+
+QPushButton[saveasfile]:hover{
+     image: url(:/Resource/Images/saveas_hover.png);
+}
+
+QPushButton[saveasfile]:pressed{
+     image: url(:/Resource/Images/saveas_click.png);
+}
+QPushButton[addpair]{
+    background-color:#CDC5BF;
+    border-radius: 2px;
+    image: url(:/Resource/Images/alignpari.png);
+}
+
+QPushButton[setup] {
+     border:none;
+     background-color: transparent;
+     height:45px;
+     width:45px;
+     padding-left: 0px;
+     padding-right: 0px;
+     image: url(:/Resource/Images/set_normal.png);
+}
+
+QPushButton[setup]:hover{
+     image: url(:/Resource/Images/set_hover.png);
+}
+
+QPushButton[setup]:pressed{
+     image: url(:/Resource/Images/set_click.png);
+}
+
+
+QPushButton[radiusnone = false] {
+    border:1px solid rgb(59,59,59);
+    border-radius: 2px;
+    background-color: #3C3C3C;
+    font-size: 16px;
+    color:#ffffff;
+}
+
+
+QPushButton[function=true]:hover {
+    background-color: rgb(70,70,65);
+}
+QPushButton[function=true]:pressed {
+    background-color: rgb(70,70,65);
+}
+
+QPushButton[function=true] {
+    background-color: rgb(70,70,85);
+    border:1px solid rgb(59,59,59);
+    border-radius: 2px;
+    font-size: 16px;
+    color:#ffffff;
+}
+QPushButton[radiusnone=true]:hover {
+    background-color: #077aa6;
+}
+QPushButton[radiusnone=true]:pressed {
+    background-color: rgb(30,128,165);
+}
+
+QPushButton[radiusnone=true] {
+    background-color: #04597a;
+    border:1px solid rgb(59,59,59);
+    border-radius: 2px;
+    font-size: 16px;
+    color:#ffffff;
+}
+
+QPushButton[OfflineFile = true] {
+    background-color: rgb(42,42,42);
+    border:1px solid rgb(59,59,59);
+    border-radius: 2px;
+    font-size: 16px;
+    min-width:10px;
+    color:#ffffff;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+QPushButton[OfflineFile = true]:hover {
+    background-color: rgb(74,74,74);
+}
+QPushButton[OfflineFile = true]:pressed {
+    background-color: rgb(74,74,74);
+}
+
+QPushButton[statrall]{
+    border:1px solid rgb(59,59,59);
+    border-radius: 2px;
+    background-color: #3C3C3C;
+    font-size: 16px;
+    color:#ffffff;
+    background-image: url(:/Resource/Images/start_normal.png);
+}
+QPushButton[statrall]:hover {
+    background-color: #3C3C3C;
+    background-image: url(:/Resource/Images/start_hover.png);
+}
+QPushButton[statrall]:pressed {
+    background-color: #3C3C3C;
+    background-image: url(:/Resource/Images/start_normal.png);
+}
+
+QPushButton[stopall]{
+    background-color: #3C3C3C;
+    border:1px solid rgb(59,59,59);
+    border-radius: 2px;
+    font-size: 16px;
+    color:#ffffff;
+    background-image: url(:/Resource/Images/stop_normal.png);
+}
+QPushButton[stopall]:hover {
+    background-color: #3C3C3C;
+    background-image: url(:/Resource/Images/stop_hover.png);
+}
+QPushButton[stopall]:pressed {
+    background-color: #3C3C3C;
+    background-image: url(:/Resource/Images/stop_normal.png);
+}
+
+
+QPushButton[delete] {
+    border-radius: 2px;
+    background-color: #BF4142;
+}
+QPushButton[import] {
+    border-radius: 2px;
+    background-color: rgb(25,125,180);
+}
+QPushButton[export] {
+    border-radius: 2px;
+    background-color: rgb(25,125,180);
+}
+QPushButton[messageshow] {
+    border-radius: 2px;
+    background-color: #8B8B83;
+}
+QPushButton[confirm] {
+    border-radius: 2px;
+    background-color: rgb(112,182,3);
+}
+
+QPushButton[setbutton] {
+    border-radius: 2px;
+    background-color: rgb(51,51,51);
+}
+
+QPushButton[robotcamerapair]{
+    border-radius: 0px;
+    border:1px solid #576A4A;
+    width: 400px;
+    height: 600px;   
+}
+QPushButton[workpiecealignpair]{
+    border-radius: 0px;
+    border:1px solid #576A4A;
+    width: 270px;
+    height: 300px;
+}
+
+QPushButton[workpiecealignpair = true]:hover{
+    border: 1px solid #278736;
+}
+
+QPushButton[workpiecealignpair= true]:pressed{
+     border: 1px solid #FF7F24;
+}
+QPushButton[workpiecealignpair = false]{
+    border: 1px solid #FF7F24;
+}
+
+QPushButton[applybutton] {
+    border-radius: 2px;
+    background-color: rgb(21,92,166);
+}
+QPushButton[cancelbutton] {
+    border-radius: 2px;
+   background-color: rgb(51,51,51);
+}
+
+QPushButton[robotstatus]{
+    border:none;
+    background-color: transparent;   
+}
+
+QPushButton[robotstatus = true]{
+    image: url(:/Resource/Images/camera_link.png);
+}
+QPushButton[robotstatus = false]{
+    image: url(:/Resource/Images/camera_unlink.png);
+}
+QPushButton[camerastatus = false]{
+    image: url(:/Resource/Images/camera_unline.png);
+}
+
+QPushButton[bordernonebutton]{
+    border-radius: 2px;
+    background-color: #D6ECF7;
+    color:#000000;
+}
+QPushButton[robotcamerapairadd]{
+    background-color:transparent;
+    border:none;
+    image: url(:/Resource/Images/icon_interface_add_normal.png);
+}
+QPushButton[robotcamerapairadd]:pressed{
+    background-color:transparent;
+    border:none;
+    image: url(:/Resource/Images/icon_interface_add_pressed.png);
+}
+QPushButton[robotcamerapairadd]:hover{
+
+    background-color:transparent;
+    border:none;
+    image: url(:/Resource/Images/icon_interface_add_pressed.png);
+}
+
+QPushButton[camerapose=normal]{
+    padding:0px;
+    border:none;
+    image:url(:/Resource/Images/photos_normal.png);
+}
+QPushButton[camerapose=normal]:hover{
+    image:url(:/Resource/Images/photos_hover.png);
+}
+QPushButton[camerapose=normal]:checked{
+   image:url(:/Resource/Images/photos_disable.png);
+}
+
+
+
+QPushButton[weldtrace=normal]{
+    padding:0px;
+    border:none;
+    image:url(:/Resource/Images/track_normal.png);
+}
+QPushButton[weldtrace=normal]:hover{
+    image:url(:/Resource/Images/track_hover.png);
+}
+QPushButton[weldtrace=normal]:checked{
+    image:url(:/Resource/Images/track_disable.png);
+}
+
+QPushButton[weldline=normal]{
+    padding:0px;
+    border:none;
+    image:url(:/Resource/Images/weldline_normal.png);
+}
+QPushButton[weldline=normal]:hover{
+    image:url(:/Resource/Images/weldine_hover.png);
+}
+QPushButton[weldline=normal]:checked{
+    image:url(:/Resource/Images/weldline_disable.png);
+}
+
+QPushButton[cameraSettingInfo]{   
+	border-width: 0px;
+    height: 50px;
+    width: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    image: url(:/Resource/Images/CameraSetting/info.png);
+}
+QPushButton[cameraSettingInfo]:disabled{   
+    image: url(:/Resource/Images/CameraSetting/info_disabled.png);
+}
+
+QPushButton[cameraSettingRestart]{ 
+	border-width: 0px;
+    height: 50px;
+    width: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    image: url(:/Resource/Images/CameraSetting/restart.png);
+}
+QPushButton[cameraSettingRestart]:disabled{   
+    image: url(:/Resource/Images/CameraSetting/restart_disabled.png);
+}
+
+QPushButton[cameraSettingShot]{ 
+	border-width: 0px;
+    height: 50px;
+    width: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    image: url(:/Resource/Images/CameraSetting/shot.png);
+}
+QPushButton[cameraSettingShot]:disabled{   
+    image: url(:/Resource/Images/CameraSetting/shot_disabled.png);
+}
+
+QPushButton[cameraSettingStream]{  
+    border-width: 0px;
+    height: 50px;
+    width: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    image: url(:/Resource/Images/CameraSetting/start.png);
+}
+
+QPushButton[cameraSettingStream]:unchecked{   
+    image: url(:/Resource/Images/CameraSetting/start.png);
+}
+QPushButton[cameraSettingStream]:checked{   
+    image: url(:/Resource/Images/CameraSetting/stop.png);
+}
+QPushButton[cameraSettingStream]:disabled { 
+   image:url(:/Resource/Images/CameraSetting/start_disabled.png);
+}
+
+QPushButton[cameraSetting2D3D]{  
+    border-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-image: url(:/Resource/Images/CameraSetting/switch3d.png);
+}
+QPushButton[cameraSetting2D3D]:hover{  
+    border-image: url(:/Resource/Images/CameraSetting/switch3d_hover.png);
+}
+QPushButton[cameraSetting2D3D]:checked{   
+    border-image: url(:/Resource/Images/CameraSetting/switch2d.png);
+}
+QPushButton[cameraSetting2D3D]:checked:hover{   
+    border-image: url(:/Resource/Images/CameraSetting/switch2d_hover.png);
+}
+QPushButton[cameraSetting2D3D]:disabled { 
+    border-image:url(:/Resource/Images/CameraSetting/switch3d.png)
+}
+
+QPushButton[detectionstatus=true]{ 
+   background-color: #970808;
+   image:url(:/Resource/Images/btn_stop.png);
+}
+QPushButton[detectionstatus=false]{ 
+   background-color: #04597a;
+   image:url(:/Resource/Images/btn_start.png);
+}
+QPushButton[detectionstatus=true]:hover{ 
+   background-color: #d20c0c;
+}
+QPushButton[detectionstatus=false]:hover{ 
+   background-color: #077aa6;
+}
+
+QPushButton[DetailsGalleryWidget]{
+    border-radius: 0px;
+    border:1px solid #576A4A;
+    width: 350px;
+    height: 300px;
+}
+
+QPushButton[DetailsGalleryWidget = true]:hover{
+    border: 2px solid #278736;
+}
+
+QPushButton[DetailsGalleryWidget= true]:pressed{
+     border: 2px solid #FF7F24;
+}
+QPushButton[DetailsGalleryWidget= true]:flat{
+     border: 2px solid #FF7F24;
+}
+
+QPushButton[DetailsGalleryWidget=true]:checked{
+     border: 2px solid #FF7F24;
+}
+
+QPushButton[browsebutton =true]{
+    border-radius: 0px;
+    border:1px solid #5b5e66;
+    width:28px;
+    min-width: 28px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+QPushButton[noneborderbutton =true]{
+    border-radius: 0px;
+    border:1px solid #5b5e66;
+}
+
+QPushButton[navigationgraphicsbuttonmax =true]{
+ 
+    background-color:rgb(66,66,77);
+    border-radius: 0px;
+    border:1px solid rgb(12,12,12);
+    border-top:none;
+    width: 290px;
+    height:80px;
+   
+}
+
+QPushButton[navigationgraphicsbuttonmax =true]:hover{
+ 
+  background-color:rgb(8, 124, 174);
+  color:rgb(255,255,255);
+}
+
+/*QPushButton[navigationgraphicsbuttonmax=true]:checked {
+  background-color: rgb(30,128,165);
+  color: #e2640c;
+}*/
+
+QPushButton[navigationgraphicsbuttonmin =true]{
+ 
+    background-color:rgb(66,66,77);
+    border-radius: 0px;
+    border:1px solid rgb(12,12,12);
+    border-top:none;
+    width: 220px;
+    height:60px;
+}
+
+QPushButton[navigationgraphicsbuttonmin=true]:checked {
+  background-color: rgb(30,128,165);
+  color: #e2640c;
+}
+
+QPushButton[NavigationChecked=true]{
+  background-color: rgb(30,128,165);
+  color: #e2640c;
+}
+QPushButton[NavigationChecked=false]{
+  background-color:rgb(66,66,77);
+  color: #e2640c;
+}
+
+
+QPushButton[cameraposedetilsbutton =true]{
+    background-color:rgb(66,66,77);
+    border-radius: 0px;
+    border:1px solid rgb(12,12,12);
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    width: 490px;
+    height: 420px;
+}
+
+QPushButton[nonebutton =true]{
+  background-color:transparent;
+  border: none;
+}

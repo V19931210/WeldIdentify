@@ -33,7 +33,24 @@ namespace WeldIdentify
     {
         public CareraRegisChishine()
         {
-            method = "3DRegis";
+            path = @"3DRegis\preciseLocate";
+            proName = "preciseLocate";
+            frmName = "preciseLocate";
+            ip = "127.0.0.1";
+            port = 5120;
+        }
+
+        public override void GetCurPointCloud()
+        {
+
+        }
+    }
+
+    public class CareraRegisTest : Camera3DRegis
+    {
+        public CareraRegisTest()
+        {
+            path = @"3DRegis\3DPreciseLocate";
             proName = "3DPreciseLocate";
             frmName = "3DPreciseLocateForm";
             ip = "127.0.0.1";
@@ -56,28 +73,13 @@ namespace WeldIdentify
     {
         public CareraRecogChishine()
         {
-            method = "3DRecog";
+            path = @"3DRecog\TracerStudio\bin";
             proName = "TracerStudio";
             frmName = "TracerStudio";
+            frmClassName = "Qt5QWindowIcon";
             ip = "127.0.0.1";
-            port = 5212;
-        }
-    }
-
-    public class CareraRegisTest : Camera3DRegis
-    {
-        public CareraRegisTest()
-        {
-            method = "3DRegis";
-            proName = "3DPreciseLocate";
-            frmName = "3DPreciseLocateForm";
-            ip = "127.0.0.1";
-            port = 5120;
-        }
-
-        public override void GetCurPointCloud()
-        {
-
+            port = 45000;
+            reserveTime = 15000;
         }
     }
 
@@ -85,7 +87,7 @@ namespace WeldIdentify
     {
         public CareraRecogTest()
         {
-            method = "3DRecog";
+            path = @"3DRecog\BCV3DEyeInHand";
             proName = "BCV3DEyeInHand";
             frmName = "BCV3DEyeInHand";
             ip = "127.0.0.1";

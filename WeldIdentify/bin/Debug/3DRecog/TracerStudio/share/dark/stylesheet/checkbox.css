@@ -1,0 +1,80 @@
+QCheckBox {
+    spacing: 0px;
+    outline: none;
+    margin-bottom: 2px;
+    border: none;
+    font-size: 16px;
+    color: #F2F2F2;
+}
+
+QCheckBox:hover,
+QCheckBox:focus,
+QCheckBox:pressed {
+    color: #e5e5e5;
+}
+
+QCheckBox:disabled {
+    color: #F2F2F2;
+}
+
+QCheckBox::indicator {
+    width: 32px;
+    height: 32px;
+}
+
+QCheckBox::indicator:unchecked:hover {
+    width: 32px;
+    height: 32px;
+    image: url(:/Resource/Images/btn_form_chackbox_uncheck_hover.png);
+}
+
+QCheckBox::indicator:disabled {
+    width: 32px;
+    height: 32px;
+}
+
+QCheckBox::indicator:focus {
+    width: 32px;
+    height: 32px;
+}
+
+QCheckBox::indicator:unchecked {
+    width: 32px;
+    height: 32px;
+    image: url(:/Resource/Images/btn_form_chackbox_uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+    width: 32px;
+    height: 32px;
+    image: url(:/Resource/Images/btn_form_chackbox_check.png);
+    border: none;
+    color: #F2F2F2;
+}
+
+QCheckBox::indicator:indeterminate {
+    width: 32px;
+    height: 32px;
+    image: url(:/Resource/Images/btn_form_chackbox_blend.png);
+    border: none;
+}
+
+QCheckBox::indicator:checked:disabled {
+    width: 32px;
+    height: 32px;
+    image: url(:/Resource/Images/btn_form_chackbox_check_disable.png);
+}
+
+QCheckBox::indicator:unchecked:disabled {
+    width: 32px;
+    height: 32px;
+    image: url(:/Resource/Images/btn_form_chackbox_uncheck_disable.png);
+}
+
+QCheckBox[leftpandingcheckbox=true] {
+    margin-left: 35px;
+}
+
+QCheckBox[cameraposeleftpanding=true] {
+    margin-left:5px;
+}

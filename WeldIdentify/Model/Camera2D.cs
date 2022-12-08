@@ -22,11 +22,12 @@ namespace WeldIdentify
     {
         public CareraBCW500()
         {
-            method = "2D";
+            path = @"2D\BCVWeldTrack";
             proName = "BCVWeldTrack";
             frmName = "BCVWeldTrackMainForm";
             ip = "127.0.0.1";
             port = 5020;
+            reserveTime = 2000;
         }
 
         public override void SendCMD()
@@ -54,7 +55,7 @@ namespace WeldIdentify
     {
         public Carera2DTest()
         {
-            method = "2D";
+            path = @"2D\BCVWeldTrack";
             proName = "BCVWeldTrack";
             frmName = "BCVWeldTrackMainForm";
             ip = "127.0.0.1";

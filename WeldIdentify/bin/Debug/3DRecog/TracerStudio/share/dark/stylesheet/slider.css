@@ -1,0 +1,41 @@
+QSlider{
+    background-color: transparent;
+    height: 24px;
+}
+QSlider::add-page:Horizontal {
+    background-color: #888b91; /*#1c1d1e;*/
+    height: 4px;
+    border-radius: 1px;
+}
+
+
+QSlider::sub-page:Horizontal {
+    background-color: #e97c02;
+    height: 4px;
+    border-radius: 1px;
+}
+QSlider::groove:Horizontal {
+    height: 4px;
+    border: 1px solid #7d8591;
+    /*border-radius: 2px;*/
+}
+
+QSlider::handle:Horizontal {
+    background-color: transparent;
+    background-image: url(:/Resource/Images/btn_silder_normal.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 16px;
+    margin: -10px -1px;
+}
+
+QSlider::handle:Horizontal:hover {
+    background-image: url(:/Resource/Images/btn_silder_hover.png);
+}
+QSlider::handle:Horizontal:disabled {
+    background-image: url(:/Resource/Images/btn_silder_disabble.png);
+}
+QSlider::handle:Horizontal:pressed{
+    background-image: url(:/Resource/Images/btn_silder_pressed.png);
+}

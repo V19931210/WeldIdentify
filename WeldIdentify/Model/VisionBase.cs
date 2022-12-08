@@ -21,11 +21,14 @@ namespace WeldIdentify
         public static extern long GetWindowLong(IntPtr hWnd, int nIndex);
 
         //与进程有关的变量
-        public string method;
+        public string path;
         public string proName;
         public string frmName;
+        public string frmClassName;
         public IntPtr handle = new IntPtr(0);
         public long oriWindowLong;
+        public string otherProName;
+        public int reserveTime = 1000;
 
         //与socket有关的变量
         public static Socket socket;
@@ -36,7 +39,12 @@ namespace WeldIdentify
         public void InitCameraSoftware()
         {
             openProcess();
+            Thread.Sleep(reserveTime);
             findHandle();
+            if (otherProName != null)
+            {
+                killOtherProcess();
+            }
             initSocket();
         }
 
@@ -44,30 +52,35 @@ namespace WeldIdentify
         public void InitCameraSoftwareWithoutSocket()
         {
             openProcess();
+            Thread.Sleep(reserveTime);
             findHandle();
+            if (otherProName != null)
+            {
+                killOtherProcess();
+            }
         }
 
         //开启软件进程
-        private void openProcess()
+        public void openProcess()
         {
             Process[] proArr = Process.GetProcessesByName(proName);
             if (proArr.Length == 0)
             {
                 Process pro = new Process();
                 string path = Directory.GetCurrentDirectory();
-                path += $@"\{method}\{proName}.exe";
+                path += $@"\{this.path}\{proName}.exe";
                 pro.StartInfo.FileName = path;
                 pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 pro.Start();
             }
         }
 
-        //查找进程句柄
-        private void findHandle()
+        //查找进程窗口句柄 搜索15s
+        public void findHandle()
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 150; i++)
             {
-                handle = FindWindow(null, frmName);
+                handle = FindWindow(frmClassName, frmName);
                 if (handle != IntPtr.Zero)
                 {
                     oriWindowLong = GetWindowLong(handle, GWL_STYLE);
@@ -76,12 +89,23 @@ namespace WeldIdentify
                 else
                 {
                     Thread.Sleep(100);
+                    continue;
                 }
             }
         }
 
+        //关闭相关软件
+        public void killOtherProcess()
+        {
+            Process[] proArr = Process.GetProcessesByName(otherProName);
+            if (proArr.Length != 0)
+            {
+                proArr[0].Kill();
+            }
+        }
+
         //初始化socket
-        private void initSocket()
+        public void initSocket()
         {
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 3000);
@@ -89,21 +113,24 @@ namespace WeldIdentify
         }
 
         //对外接口 关闭软件
-        public void CloseCamera()
+        public void CloseSoftware()
         {
             closeSocket();
             killProcess();
         }
 
-        private void closeSocket()
+        public void closeSocket()
         {
-            if (socket.Connected == true)
+            if (socket != null)
             {
-                socket.Close();
+                if (socket.Connected == true)
+                {
+                    socket.Close();
+                }
             }
         }
 
-        private void killProcess()
+        public void killProcess()
         {
             Process[] proArr = Process.GetProcessesByName(proName);
             if (proArr.Length > 0)
